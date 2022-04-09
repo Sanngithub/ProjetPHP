@@ -11,7 +11,7 @@ class Film {
     public $jaquette;
     public $dateCreation;
 
-
+    // modifie !
     // méthodes de la classe Film...
 
     // public function __construct() {}
