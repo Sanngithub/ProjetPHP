@@ -122,7 +122,7 @@ CSS FOR INDEX.PHP AND REGISTER.PHP
 .error {
     font-size: 15px;
     text-align: center;
-    color: #ffff;
+    color: red;
     font-weight: bold;
 }
 
