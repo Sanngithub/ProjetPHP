@@ -12,12 +12,18 @@
     <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
     <!-- force le cache à se reloader -->
     <title>SuperFilms - Animes</title>
+        <!---------------------------from fontawesome and bootsrap--------------------------------------------------->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/jquery-3.3.1.slim.min.js" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" > -->
+    <link rel="stylesheet" href="style4.css" type="text/css" />
 </head>
 
 
 <body>
     <!--*************** STATIC BACKGROUND *********************************************************************************************************************************************************************************************************-->
-    <div class="no_print" id="full-size-background"></div>
+    <!-- <div class="no_print" id="full-size-background"></div> -->
 
 
     <?php include_once('header.php'); ?>
