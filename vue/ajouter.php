@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="style4.css?v=<?php echo time(); ?>">
     <title>SuperFilms - Animes</title>
 </head>
 
@@ -27,7 +27,7 @@
 
 
     <!--*************** MAIN **********************************************************************************************************************************************************************************************************************-->
-    <main>
+    <div class="bloc-add-anime">
 
         <div id="addOrUpdate">
             <fieldset>
@@ -94,7 +94,7 @@
         <?php
 
         ?>
-    </main>
+    </div>
 
 	
    <?php include_once('footer.php'); ?>
