@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform:capitalize;
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    /* background:url(animes2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center */
+    background-color: #000;
+    color: #fff;
+
+}
+
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0; 
+    /* background: rgba(145, 152, 179, 0.1); */
+    /* background: rgb(37, 90, 103); */
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(95,144,144,1) 51%, rgba(174,181,149,0.9139005944174545) 83%, rgba(150,164,167,1) 100%);
+    box-shadow: 2px 2px 5px #555;
+    padding:0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 25px;
+    color: #83acf1;
+    text-decoration: none;
+    font-family: 'Aclonica', sans-serif;
+}
+header .logo span {
+    font-weight: bold;
+    font-size: 25px;
+    color: #c0d5f9;
+    font-family: 'Aclonica', sans-serif;
+}
+
+
+header .navbar ul{
+    list-style: none;
+}
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    /* font-weight: bold; */
+    padding:17px;
+    color:#000;
+    display: block;
+}
+
+header .navbar ul li a:hover{
+    border-radius: 4px;
+    background-color:#308491 ;
+    color: #fff;
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: #fff;
+    display:none;
+}
+
+header .navbar ul li ul input{
+    border: none;
+    border-radius: 4px;
+    width: 200px;
+    background-color: lightcyan;
+    height:50px;
+    font-size: 18px;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,.1);
+    background: rgb(255, 255, 255);
+}
+
+
+header .navbar ul li ul li ul {
+    left : 200px;
+    top :0;
+}
+
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+.grid {
+    max-width: 1300;
+    width: 90%;
+    height: auto;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: center;
+    grid-gap: 10px;
+    background: #000;
+}
+
+img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.bloc-animes, .bloc-animes-user {
+    position: relative;
+    padding: 100px 0px;
+    height: 100vh;
+    background-color: #000;
+}
+
+.bloc-user-update {
+    position: relative;
+    padding: 100px 0px 10px 0px;
+    height: 100vh;
+    background-color: white;
+}
+
+.bloc-add-anime{
+    position: relative;
+    padding: 100px 0px 10px 0px;
+    height: 100vh;
+    background-color: white;
+}
+
+.title-manga {
+    position: relative;
+    top: 50%;
+}
+
+@media(max-width:991px){
+    header {
+        padding:20px;
+    }
+
+    header label {
+        display: initial;
+        color: white;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: rgba(145, 152, 179, 0.1);
+        background: lightgray;
+        border-top: 1px solid rgba(0,0,0,.1);
+        display: none;
+    }
+
+    header .navbar ul li {
+        width: 100%;   
+    }
+
+    header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li {
+        background: rgb(255, 255, 255);
+    }
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+    header .navbar ul li ul input {
+        background: rgb(255, 255, 255);
+        width: 100%;
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display:initial
+    }
+
+}
+
+
+
+
+
+
+
+
+

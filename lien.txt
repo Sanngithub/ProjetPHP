@@ -1,4 +1,4 @@
-http://localhost/projetPHP/index.php
+http://localhost/projetPHPJ/vue/index.php
 
 
 INSERT INTO `user`(`pseudo`,`password`,`nom`,`prenom`,`email`) VALUES ('sann','1234','MAROTTA','Bernard','bernard@gmail.com'), ('jon','456789','','','test@test.com');
