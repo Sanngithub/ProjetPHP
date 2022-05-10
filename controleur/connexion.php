@@ -3,11 +3,11 @@
     // define('DB_NAME', 'projetphp_superfilms');
     // define('DB_USER', 'projetPHP_superfilms');
     // define('DB_PASSWORD', '123456');
-    // define('DB_HOST', 'localhost');    
+    // define('DB_HOST', 'localhost');
     // define('DB_NAME', 'superfilms');
     // define('DB_USER', 'root');
     // define('DB_PASSWORD', '');
-    // define('DB_HOST', '127.0.0.1');    
+    // define('DB_HOST', '127.0.0.1');
 
 
     try{

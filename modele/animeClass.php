@@ -20,6 +20,7 @@
         private  $synopsis;
         private  $nb_episodes;
         private  $note;
+        private  $jaquette;
         private  $createur;
         
 
@@ -35,6 +36,7 @@
         public function getSynopsis(){return $this->synopsis;}
         public function getNb_episodes(){return $this->nb_episodes;}
         public function getNote(){return $this->note;}
+        public function getJaquette(){return $this->jaquette;}
         public function getCreateur(){return $this->createur;}
         
 
@@ -75,6 +77,9 @@
         }
         public function setNote($note){
             $this->note = (float)$note;
+        }
+        public function setJaquette($jaquette){
+            $this->jaquette = $jaquette;
         }
         
         public function setCreateur($createur) {

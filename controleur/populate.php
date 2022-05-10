@@ -43,79 +43,88 @@
     //             </tr> 
     //     ';
     // }
+    echo "<br><br><br><br><br><br><br>";
+    foreach ($animes as $anime){
+        if ($anime->getId_anime()==61) {
+            // echo '<img>'.($anime->getJaquette())['image'].'</img>';
+            // echo '<img src="data:image/jpeg;base64,'.base64_encode($anime->getJaquette()['image']).'"/>';
+            // echo '<img src="data:image/jpg;base64,'.base64_encode($anime->getJaquette()['image']->load()) .'" />';
+            // echo '<img src="data:image/jpg;base64,'.base64_encode( $anime->getJaquette()['image_file'] ).'"/>';
+            echo '<img src="data:image/jpeg;base64,'.base64_encode( $anime->getJaquette()['image_file'] ).'"/> width="300px" height="300px"';
+  
+        }
+    }
+    // echo '
 
+    // <div class="grid">
 
-    echo '
+    //     <div class="item">
+    //         <a href=""><img src="../pictures/snkS1.jpg" alt=""></a>
+    //         <p>L\'attaque des Titans saison 1 Vostfr</p>
+    //     </div>
+    //     <div class="item">
+    //         <a href=""><img src="../pictures/snkS2.jpg" alt=""></a>
+    //         <p>L\'attaque des Titans saison 2 Vostfr</p>
+    //     </div>
+    //     <div class="item">
+    //         <a href=""><img src="../pictures/snkS3.jpg" alt=""></a>
+    //         <p>L\'attaque des Titans saison 3 Vostfr</p>
+    //     </div>
+    //     <div class="item">
+    //         <a href=""><img src="../pictures/snkS4.jpg" alt=""></a>
+    //         <p>L\'attaque des Titans saison 4 Vostfr</p>
+    //     </div>
+    //     <div class="item">
+    //         <a href=""><img src="../pictures/narutoshippuden.jpg" alt=""></a>
+    //         <p>Naruto Shippuden Vostfr</p>
+    //     </div>
+    //     <div class="item">
+    //         <a href=""><img src="../pictures/boruto.jpg" alt=""></a>
+    //         <p>Boruto Next Generations Vostfr</p>
+    //     </div>
+    //     <div class="item">
+    //         <a href=""><img src="../pictures/evangelion.jpg" alt=""></a>
+    //         <p>Evangelion Neon Genesis Vostfr</p>
+    //     </div>
+    //     <div class="item">
+    //         <a href=""><img src="../pictures/dbz.jpg" alt=""></a>
+    //         <p>Dragon Ball Z Vostfr</p>
+    //     </div>
+    //     <div class="item">
+    //         <a href=""><img src="../pictures/deathnote.jpg" alt=""></a>
+    //         <p>Death Note Vostfr</p>
+    //     </div>
+    //     <div class="item">
+    //         <a href=""><img src="../pictures/gto.jpg" alt=""></a>
+    //         <p>Great Onizuka Teeacher Vostfr</p>
+    //     </div>
+    //     <div class="item">
+    //         <a href=""><img src="../pictures/onepiece.jpg" alt=""></a>
+    //         <p>One Piece Vostfr</p>
+    //     </div>
+    //     <div class="item">
+    //         <a href=""><img src="../pictures/sailormoon.jpg" alt=""></a>
+    //         <p>Sailor Moon Vostfr</p>
+    //     </div>
 
-    <div class="grid">
+    //     <!-- <a href=""><img src="../pictures/snkS1.jpg" alt=""></a>
+    //     <a href=""><img src="../pictures/snkS2.jpg" alt=""></a>
+    //     <a href=""><img src="../pictures/snkS3.jpg" alt=""></a>
+    //     <a href=""><img src="../pictures/snkS4.jpg" alt=""></a>
 
-        <div class="item">
-            <a href=""><img src="../pictures/snkS1.jpg" alt=""></a>
-            <p>L\'attaque des Titans saison 1 Vostfr</p>
-        </div>
-        <div class="item">
-            <a href=""><img src="../pictures/snkS2.jpg" alt=""></a>
-            <p>L\'attaque des Titans saison 2 Vostfr</p>
-        </div>
-        <div class="item">
-            <a href=""><img src="../pictures/snkS3.jpg" alt=""></a>
-            <p>L\'attaque des Titans saison 3 Vostfr</p>
-        </div>
-        <div class="item">
-            <a href=""><img src="../pictures/snkS4.jpg" alt=""></a>
-            <p>L\'attaque des Titans saison 4 Vostfr</p>
-        </div>
-        <div class="item">
-            <a href=""><img src="../pictures/narutoshippuden.jpg" alt=""></a>
-            <p>Naruto Shippuden Vostfr</p>
-        </div>
-        <div class="item">
-            <a href=""><img src="../pictures/boruto.jpg" alt=""></a>
-            <p>Boruto Next Generations Vostfr</p>
-        </div>
-        <div class="item">
-            <a href=""><img src="../pictures/evangelion.jpg" alt=""></a>
-            <p>Evangelion Neon Genesis Vostfr</p>
-        </div>
-        <div class="item">
-            <a href=""><img src="../pictures/dbz.jpg" alt=""></a>
-            <p>Dragon Ball Z Vostfr</p>
-        </div>
-        <div class="item">
-            <a href=""><img src="../pictures/deathnote.jpg" alt=""></a>
-            <p>Death Note Vostfr</p>
-        </div>
-        <div class="item">
-            <a href=""><img src="../pictures/gto.jpg" alt=""></a>
-            <p>Great Onizuka Teeacher Vostfr</p>
-        </div>
-        <div class="item">
-            <a href=""><img src="../pictures/onepiece.jpg" alt=""></a>
-            <p>One Piece Vostfr</p>
-        </div>
-        <div class="item">
-            <a href=""><img src="../pictures/sailormoon.jpg" alt=""></a>
-            <p>Sailor Moon Vostfr</p>
-        </div>
-
-        <!-- <a href=""><img src="../pictures/snkS1.jpg" alt=""></a>
-        <a href=""><img src="../pictures/snkS2.jpg" alt=""></a>
-        <a href=""><img src="../pictures/snkS3.jpg" alt=""></a>
-        <a href=""><img src="../pictures/snkS4.jpg" alt=""></a>
-
-        <a href=""><img src="../pictures/snkS1.jpg" alt=""></a>
-        <a href=""><img src="../pictures/snkS1.jpg" alt=""></a>
-        <a href=""><img src="../pictures/snkS1.jpg" alt=""></a>
-        <a href=""><img src="../pictures/snkS1.jpg" alt=""></a>
+    //     <a href=""><img src="../pictures/snkS1.jpg" alt=""></a>
+    //     <a href=""><img src="../pictures/snkS1.jpg" alt=""></a>
+    //     <a href=""><img src="../pictures/snkS1.jpg" alt=""></a>
+    //     <a href=""><img src="../pictures/snkS1.jpg" alt=""></a>
         
-        <a href=""><img src="../pictures/snkS1.jpg" alt=""></a>
-        <a href=""><img src="../pictures/snkS1.jpg" alt=""></a>
-        <a href=""><img src="../pictures/snkS1.jpg" alt=""></a>
-        <a href=""><img src="../pictures/snkS1.jpg" alt=""></a> -->
+    //     <a href=""><img src="../pictures/snkS1.jpg" alt=""></a>
+    //     <a href=""><img src="../pictures/snkS1.jpg" alt=""></a>
+    //     <a href=""><img src="../pictures/snkS1.jpg" alt=""></a>
+    //     <a href=""><img src="../pictures/snkS1.jpg" alt=""></a> -->
 
-    </div>
+    // </div>
     
-    ';
+    // ';
 
 
 ?>
