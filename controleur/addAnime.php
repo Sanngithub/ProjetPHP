@@ -54,6 +54,15 @@
             header('location:../vue/ajouter.php?id=<php echo $idUser?>');
 
         } else {
+
+            $image;
+            $b = getimagesize($_FILES["userImage"]["tmp_name"]);
+            //Vérifiez si l'utilisateur à sélectionné une image
+            if($b !== false){
+                //Récupérer le contenu de l'image
+                $file = $_FILES['userImage']['tmp_name'];
+                $image = addslashes(file_get_contents($file));
+            }
             
             $data = [
                 'titre_native' => $_POST['titre_native'],
@@ -64,6 +73,7 @@
                 'genre' => $_POST['genre'],
                 'synopsis' => $_POST['synopsis'],
                 'nb_episodes' => $_POST['nb_episodes'],
+                'jaquette' => $image,
                 'createur' => $idUser
             ];
             

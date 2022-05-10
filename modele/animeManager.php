@@ -17,9 +17,11 @@
         public function add(Anime $anime){
             
             if ($this->isAlreadyExist($anime) === false){
+
+ 
                 try{
-                    $req = $this->bdd->prepare('INSERT INTO animes(titre_native, titre_romaji, titre_fr, status, studio, genre, synopsis, nb_episodes, createur)
-                                                VALUES(:titre_native, :titre_romaji, :titre_fr, :status, :studio, :genre, :synopsis, :nb_episodes, :createur)');
+                    $req = $this->bdd->prepare('INSERT INTO animes(titre_native, titre_romaji, titre_fr, status, studio, genre, synopsis, nb_episodes, jaquette, createur)
+                                                VALUES(:titre_native, :titre_romaji, :titre_fr, :status, :studio, :genre, :synopsis, :nb_episodes,:jaquette, :createur)');
                     $req->bindValue(':titre_native', $anime->getTitre_native(), PDO::PARAM_STR);
                     $req->bindValue(':titre_romaji', $anime->getTitre_romaji(), PDO::PARAM_STR);
                     $req->bindValue(':titre_fr', $anime->getTitre_fr(), PDO::PARAM_STR);
@@ -28,6 +30,7 @@
                     $req->bindValue(':genre', $anime->getGenre(), PDO::PARAM_STR);
                     $req->bindValue(':synopsis', $anime->getSynopsis(), PDO::PARAM_STR);
                     $req->bindValue(':nb_episodes', $anime->getNb_episodes(), PDO::PARAM_INT);
+                    $req->bindValue(':jaquette', $anime->getJaquette());
                     $req->bindValue(':createur', $anime->getCreateur(), PDO::PARAM_INT);
                     $req->execute();
                     return true;

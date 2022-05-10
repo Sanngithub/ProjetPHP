@@ -140,6 +140,47 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
 }
+.container-user-info {
+    text-align: center;
+    background-color: red;
+    margin: auto;
+}
+.bloc-info-user {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+}
+
+.bloc-info-user table {
+    margin: 50px;
+}
+.bloc-info-user table tr {
+    text-align: justify;
+    background-color: white;
+}
+.bloc-info-user table tr td{
+    padding: 14px 0px;
+}
+
+.bloc-info-user h1 {
+    margin: 50px;
+}
+
+
+.container-add-anime {
+    text-align: center;
+    background-color: red;
+    margin: 60px 0px;;
+}
+.container-add-anime h1 {
+    margin: 50px;
+}
+.bloc-add-anime {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    margin: 60px 0;
+}
 
 .bloc-animes, .bloc-animes-user {
     position: relative;
@@ -152,15 +193,9 @@ p {
     position: relative;
     padding: 100px 0px 10px 0px;
     height: 100vh;
-    background-color: white;
+    background-color: lightcoral;
 }
 
-.bloc-add-anime{
-    position: relative;
-    padding: 100px 0px 10px 0px;
-    height: 100vh;
-    background-color: white;
-}
 
 .title-manga {
     position: relative;

@@ -20,48 +20,57 @@
     echo "<br><br><br><br><br><br><br><br>";
     ?>  
 
-    
-    <div class="bloc-info-user">
-        
-            <div>
+
+    <div class="container-user-info">
+
+        <div class="bloc-info-user">
+            
+                
                 <h1>My Informations</h1>
-            </div>
+                
+    
+                <table>
+                    <?php
+                        foreach ($listUsers as $user) {
+                            if ($_SESSION['pseudo'] == $user->getPseudo() || $id == $user->getIdUser()) {
+                                echo '
+                                <tr>
+                                    <td>Pseudo</td>
+                                    <td>'.$user->getPseudo().'</td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td>'.$user->getEmail().'</td>
+                                </tr>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>'.$user->getNom().'</td>
+                                </tr>
+                                <tr>
+                                    <td>Firstname</td>
+                                    <td>'.$user->getPrenom().'</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href=" ./userUpdate.php?id='.$user->getIdUser().' " >Modifier mes informations</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href=" ../controleur/deleteUser.php?id='.$user->getIdUser().' " >Supprimer le compte</a>
+                                    </td>
+                                </tr>
+                            ';
 
-            <table>
-                <?php
-                    foreach ($listUsers as $user) {
-                        if ($_SESSION['pseudo'] == $user->getPseudo() || $id == $user->getIdUser()) {
-                            echo '
-                            <tr>
-                                <td>Pseudo</td>
-                                <td>'.$user->getPseudo().'</td>
-                            </tr>
-                            <tr>
-                                <td>Email</td>
-                                <td>'.$user->getEmail().'</td>
-                            </tr>
-                            <tr>
-                                <td>Name</td>
-                                <td>'.$user->getNom().'</td>
-                            </tr>
-                            <tr>
-                                <td>Firstname</td>
-                                <td>'.$user->getPrenom().'</td>
-                            </tr>
-                            <td>
-                            <a href=" ./userUpdate.php?id='.$user->getIdUser().' " >Modifier mes informations</a>
-                            </td>
-                            <td>
-                                <a href=" ../controleur/deleteUser.php?id='.$user->getIdUser().' " >Supprimer le compte</a>
-                            </td>
-
-                        ';
-
+                            }
                         }
-                    }
-                ?> 
-            </table>
+                    ?> 
+                </table>
+        </div>
+
+
     </div>
+    
 
     <?php
         // if(isset($_POST['submit'])) {
