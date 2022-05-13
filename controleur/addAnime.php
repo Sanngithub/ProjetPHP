@@ -53,7 +53,9 @@
             $_SESSION['error_addAnime'] = 'Erreur : Anime déjà présente------ !';
             header('location:../vue/ajouter.php?id=<php echo $idUser?>');
 
-        } else {
+        }
+        
+        else {
 
             $image;
             $b = getimagesize($_FILES["userImage"]["tmp_name"]);
@@ -61,7 +63,8 @@
             if($b !== false){
                 //Récupérer le contenu de l'image
                 $file = $_FILES['userImage']['tmp_name'];
-                $image = addslashes(file_get_contents($file));
+                // $image = addslashes(file_get_contents($file));
+                $imageData = base64_encode(file_get_contents($file));
             }
             
             $data = [
@@ -73,7 +76,7 @@
                 'genre' => $_POST['genre'],
                 'synopsis' => $_POST['synopsis'],
                 'nb_episodes' => $_POST['nb_episodes'],
-                'jaquette' => $image,
+                'jaquette' => $imageData,
                 'createur' => $idUser
             ];
             

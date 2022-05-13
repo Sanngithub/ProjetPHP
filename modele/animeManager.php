@@ -21,7 +21,7 @@
  
                 try{
                     $req = $this->bdd->prepare('INSERT INTO animes(titre_native, titre_romaji, titre_fr, status, studio, genre, synopsis, nb_episodes, jaquette, createur)
-                                                VALUES(:titre_native, :titre_romaji, :titre_fr, :status, :studio, :genre, :synopsis, :nb_episodes,:jaquette, :createur)');
+                                                VALUES(:titre_native, :titre_romaji, :titre_fr, :status, :studio, :genre, :synopsis, :nb_episodes, :jaquette, :createur)');
                     $req->bindValue(':titre_native', $anime->getTitre_native(), PDO::PARAM_STR);
                     $req->bindValue(':titre_romaji', $anime->getTitre_romaji(), PDO::PARAM_STR);
                     $req->bindValue(':titre_fr', $anime->getTitre_fr(), PDO::PARAM_STR);

@@ -1,12 +1,6 @@
 <?php
     class User{
 
-        // private int $idUser;
-        // private String $pseudo;
-        // private String $password;
-        // private String $email;
-        // private String $nom;
-        // private String $prenom;
         private $idUser;
         private $pseudo;
         private $password;
@@ -58,10 +52,6 @@
                 }
             }
         }
-
     }
-
-
     $user = new User();
-
 ?>

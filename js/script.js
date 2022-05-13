@@ -11,7 +11,7 @@ function verifierMdp() {
     }
     
     // on teste la présence de caractère spécial
-    if (mdp.search(/[!§&#+=()@%?]/) !== -1) {
+    if (mdp.search(/[-+_!@#$%^&*.,?]/) !== -1) {
         document.getElementById("case2").src = "../pictures/coche.jpg";
     } else {
         document.getElementById("case2").src = "../pictures/vide.png";
@@ -19,7 +19,7 @@ function verifierMdp() {
     }
 
     // on teste la longueur du mot de passe
-    if (mdp.length >= 5 && mdp.length < 35) {
+    if (mdp.length >= 6 && mdp.length < 35) {
         document.getElementById("case3").src = "../pictures/coche.jpg";
     } else {
         document.getElementById("case3").src = "../pictures/vide.png";

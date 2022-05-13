@@ -1,63 +1,54 @@
 <?php
     session_start();
     require('../controleur/login_verification.php');
-    // require('../controleur/connexion.php');
-    // require('../modele/animeManager.php');
-    // $animeManager = new AnimeManager($bdd);
-    // $listAnimes = $animeManager->getAll();
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuperAnimes - Accueil</title>
-    <link rel="stylesheet" href="style4.css?v=<?php echo time(); ?>" type="text/css" >
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SuperAnimes - Accueil</title>
+        <link rel="stylesheet" href="style4.css?v=<?php echo time(); ?>" type="text/css" >
+    </head>
 
-    <?php include_once('header.php'); ?>
+    <body>
 
-    <div class="bloc-animes">
-            <table class="table">
-                <thead class="table-head">
-                    <tr class="row-head">
+        <?php include_once('header.php'); ?>
 
-                        <th class="cell head-titre">Titre</th>
+        <div class="bloc-animes">
+                <table class="table">
+                    <thead class="table-head">
+                        <tr class="row-head">
 
-                    </tr>
-                </thead>
+                            <th class="cell head-titre">Titre</th>
 
+                        </tr>
+                    </thead>
 
-                <?php
-                    require_once('../controleur/populate.php');
-                ?> 
+                    <?php
+                        require_once('../controleur/populate.php');
+                    ?> 
+                </table>
 
-            </table>
+        </div>
 
-    </div>
+        <?php
+            echo '<br><br><br>';
 
-    <?php
-        echo '<br><br><br>';
+            if(isset($_SESSION)){
+                echo '<pre>';
+                print_r($_SESSION);
+                echo '</pre>';
+                
+                echo '<pre>';
+                print_r($_COOKIE);
+                echo '</pre>';
+            }
+        ?>
 
-        if(isset($_SESSION)){
-            echo '<pre>';
-            print_r($_SESSION);
-            echo '</pre>';
-            
-            echo '<pre>';
-            print_r($_COOKIE);
-            echo '</pre>';
-        }
-    ?>
-
-    
-</body>
+        <?php include_once('footer.php'); ?>
+        
+    </body>
 </html>
-
-
-
-
-

@@ -1,59 +1,57 @@
 <?php
-    require '../controleur/connexion.php';
     require '../modele/animeManager.php';
     $animeManager = new AnimeManager($bdd);
     $animes;
     if (Empty($_GET['genre'])){
-        if (Empty($_GET['titre'])){
+        if (Empty($_GET['search'])){
             $animes = $animeManager->getAll();
         }
         else{
-            $animes = $animeManager->getAllByTitre($_GET['titre']);
+            $animes = $animeManager->getAllByTitre($_GET['search']);
         }
     }
     else{
         $animes = $animeManager->getAllByGenre($_GET['genre']);
     }
     
-    // foreach($animes as $key=>$value){
+    foreach($animes as $key=>$value){
 
-    //     $value = (array)$value;
-    //     echo '<table>';
-    //     foreach($value as $subkey=>$subvalue){
-    //         // echo $subkey . ' : ' . $subvalue.'<br>';
-    //         echo '<tr><td>' . $subkey . '</td><td> ' . $subvalue . '</td></tr>';
-    //     }
-    //     echo '</table>';
-    // }
-
-    // foreach ($animes as $value) {
-
-    //     echo ' 
-    //             <tr class="row-details">
-    //                 <td data-label="titre-film" class="cell titre-film">'.$value->getTitre_fr().'</td>
-    //                 <td data-label="link-details" class="cell link">
-    //                     <a href=" ./detailsFilm.php?id='.$value->getId_anime().' " >Détails</a>
-    //                 </td>
-    //                 <td data-label="link-update" class="cell link">
-    //                     <a href=" ./updateFilm.php?id='.$value->getId_anime().' " >Modifier</a>
-    //                 </td>
-    //                 <td data-label="link-delete" class="cell link">
-    //                     <a href=" ./deleteFilm.php?id='.$value->getId_anime().' " >Supprimer</a>
-    //                 </td>
-    //             </tr> 
-    //     ';
-    // }
-    echo "<br><br><br><br><br><br><br>";
-    foreach ($animes as $anime){
-        if ($anime->getId_anime()==61) {
-            // echo '<img>'.($anime->getJaquette())['image'].'</img>';
-            // echo '<img src="data:image/jpeg;base64,'.base64_encode($anime->getJaquette()['image']).'"/>';
-            // echo '<img src="data:image/jpg;base64,'.base64_encode($anime->getJaquette()['image']->load()) .'" />';
-            // echo '<img src="data:image/jpg;base64,'.base64_encode( $anime->getJaquette()['image_file'] ).'"/>';
-            echo '<img src="data:image/jpeg;base64,'.base64_encode( $anime->getJaquette()['image_file'] ).'"/> width="300px" height="300px"';
-  
+        $value = (array)$value;
+        echo '<table>';
+        foreach($value as $subkey=>$subvalue){
+            // echo $subkey . ' : ' . $subvalue.'<br>';
+            echo '<tr><td>' . $subkey . '</td><td> ' . $subvalue . '</td></tr>';
         }
+        echo '</table>';
     }
+
+    foreach ($animes as $value) {
+
+        echo ' 
+                <tr class="row-details">
+                    <td data-label="titre-film" class="cell titre-film">'.$value->getTitre_fr().'</td>
+                    <td data-label="link-details" class="cell link">
+                        <a href=" ./detailsFilm.php?id='.$value->getId_anime().' " >Détails</a>
+                    </td>
+                    <td data-label="link-update" class="cell link">
+                        <a href=" ./updateFilm.php?id='.$value->getId_anime().' " >Modifier</a>
+                    </td>
+                    <td data-label="link-delete" class="cell link">
+                        <a href=" ./deleteFilm.php?id='.$value->getId_anime().' " >Supprimer</a>
+                    </td>
+                </tr> 
+        ';
+    }
+    // echo "<br><br><br><br><br><br><br>";
+    // foreach ($animes as $anime){
+    //     if ($anime->getId_anime()==10) {
+    //         // echo '<img>'.($anime->getJaquette())['image'].'</img>';
+
+    //         // echo $anime->getJaquette();
+    //         // header("Content-Type: image/jpg");
+    //         // echo $anime->getJaquette()->getImagesBlob();
+    //     }
+    // }
     // echo '
 
     // <div class="grid">

@@ -144,10 +144,15 @@ CSS FOR INDEX.PHP AND REGISTER.PHP
 }
 
 .footer {
+    
     text-align: center;
 }
 
 .footer footer{
     color: rgb(218, 207, 207);
     font-size: 0.7em;
+}
+
+.footer, .push {
+    height: 155px; /* .push must be the same height as .footer */
 }
