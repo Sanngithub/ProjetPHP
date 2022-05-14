@@ -1,13 +1,13 @@
 <!--*************** HEADER **********************************************************************************************************************************************************************************************************************-->
 <?php
-    require '../controleur/connexion.php';
-    require '../modele/userManager.php';
+    require_once '../controleur/connexion.php';
+    require_once '../modele/userManager.php';
     $userManager = new userManager($bdd);
     $listUsers = $userManager->getAll();
 ?>
 
 <header>
-        <a href="#" class="logo">
+        <a href="animes.php" class="logo">
             Super<span>Animes</span>
         </a>
 
@@ -26,13 +26,10 @@
                         <li><a href="animes.php?genre=Comedy">Comedy</a></li>
                         <li><a href="animes.php?genre=Drama">Drama</a></li>
                         <li><a href="animes.php?genre=Ecchi">Ecchi</a></li>
-                        <li><a href="#">Hentai+</a>
-                            <ul>
-                                <li><a href="#">XXX</a></li>
-                                <li><a href="#">YYY</a></li>
-                                <li><a href="#">OOO</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="animes.php?genre=Hentai">Hentai</a></li>
+                        <li><a href="animes.php?genre=Seinen">Seinen</a></li>
+                        <li><a href="animes.php?genre=Shonen">Shonen</a></li>
+                        <li><a href="animes.php?genre=Shonen">Sport</a></li>
                     </ul>
                 </li>
 
@@ -51,7 +48,7 @@
                             foreach ($listUsers as $user) {
                                 if ($_SESSION['pseudo'] == $user->getPseudo()) {
                                     echo '
-                                    <li id="nav_userinfo"><a href="user.php?id='.$user->getIdUser().'" >About me</a></li>
+                                    <li id="nav_userinfo"><a href="userInfo.php?id='.$user->getIdUser().'" >About me</a></li>
                                     <li><a href="ajouter.php?id='.$user->getIdUser().'" target="_self">Add anime</a></li>
                                     <li id="nav_userinfo"><a href="userAnimes.php?id='.$user->getIdUser().'" >My animes</a></li>
                                     <li id="nav_logout"><a href="../controleur/logout.php" target="_self">Logout</a></li>
@@ -64,13 +61,10 @@
                             //     <li id="nav_userinfo"><a href="userAnimes.php?id='.$_SESSION['user']->getIdUser().'" >My animes</a></li>
                             //     <li id="nav_logout"><a href="../controleur/logout.php" target="_self">Logout</a></li>
                             // ';
-                        ?> 
-                        <!-- <li><a href="user.php">About me</a></li>
-                        <li><a href="user.php?">Mes animes</a></li>
-                        <li id="nav_logout"><a href="../controleur/logout.php" target="_self">Logout</a></li> -->
+                        ?>
                     </ul>
                 </li>
-                <li><a href="#">About us</a></li>
+                <li><a href="aboutUs.php">About us</a></li>
             </ul>
         </nav>
     </header>

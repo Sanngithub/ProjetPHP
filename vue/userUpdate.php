@@ -44,7 +44,7 @@
             <input type="text" id="prenom" name="prenom" value="<?php echo $myUser->getPrenom()?>" required>
 
             <p for="password">New Password</p>
-            <input type="password" id="password" name="password" value="<?php echo $myUser->getPassword()?>">
+            <input type="password" id="password" name="password" placeholder="enter new password">
 
             <p for="verifPassword">Confirm new password</p>
             <input type="password" id="verifPassword" name="verifPassword" placeholder="confirm password...">
@@ -53,31 +53,25 @@
             <button type="submit" name="submit" >click to modify</button>
         </form>
 
-    <!-- <div>
-        <p><a href="animes.php" target="_self">Retourner à l'accueil</a></p>
-    </div -->
         <?php
 
-            if(isset($_POST['submit'])) {
-
-                if ( empty($_POST['verifPassword']) || ($_POST['password'] == $_POST['verifPassword']) ) {
-
-                    $hashedPassword = password_hash($_POST['verifPassword'], PASSWORD_BCRYPT);
-                    $myUser->setPassword($hashedPassword);
-                    $myUser->setPseudo($_POST['pseudo']);
-                    $myUser->setEmail($_POST['mail']);
-                    $myUser->setNom($_POST['nom']);
-                    $myUser->setPrenom($_POST['prenom']);
-                    $usersManager->update($myUser);
-                    echo " <p> modifications réussies ! Vos informations seront actualisées à votre prochaine connexion !</p>";
-                    
-                } else {
+            if($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $myUser->setEmail($_POST['mail']);
+                $myUser->setNom($_POST['nom']);
+                $myUser->setPrenom($_POST['prenom']);
+                if(empty($_POST['verifPassword'])){
+                    $myUser->setPassword(   $myUser->getPassword()  );
+                    $usersManager->updateWithoutPassword($myUser);
+                }
+                else if (  !empty($_POST['verifPassword'])   &&  $_POST['password'] == $_POST['verifPassword'] ) {
+                    $myUser->setPassword(   $_POST['password']    );
+                    $usersManager->updateWithPassword($myUser);
+                }
+                header("location:../vue/userInfo.php?id=");
+                }
+                else {
                     echo " <p>lesMots de passe ne correspondent pas</p>";
                 }
-
-            }
-
-
         ?> 
     </div>
 

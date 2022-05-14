@@ -11,6 +11,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style4.css?v=<?php echo time(); ?>">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <title>SuperFilms - My Informations</title>
 </head>
 <body>
@@ -26,38 +28,40 @@
         <div class="bloc-info-user">
             
                 
-                <h1>My Informations</h1>
+                <h1>About me</h1>
                 
     
                 <table>
                     <?php
+
                         foreach ($listUsers as $user) {
                             if ($_SESSION['pseudo'] == $user->getPseudo() || $id == $user->getIdUser()) {
+                
                                 echo '
                                 <tr>
-                                    <td>Pseudo</td>
+                                    <td><i class="fas fa-user-alt"></i> my pseudo</td>
                                     <td>'.$user->getPseudo().'</td>
                                 </tr>
                                 <tr>
-                                    <td>Email</td>
+                                    <td><i class="fas fa-envelope-open"></i> my email</td>
                                     <td>'.$user->getEmail().'</td>
                                 </tr>
                                 <tr>
-                                    <td>Name</td>
+                                    <td><i class="fas fa-smile"></i> my name</td>
                                     <td>'.$user->getNom().'</td>
                                 </tr>
                                 <tr>
-                                    <td>Firstname</td>
+                                    <td><i class="far fa-smile"></i> my firstname</td>
                                     <td>'.$user->getPrenom().'</td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href=" ./userUpdate.php?id='.$user->getIdUser().' " >Modifier mes informations</a>
+                                        <a id="updateUser" href=" ./userUpdate.php?id='.$user->getIdUser().' " ><i class="far fa-edit"></i> Update my informations</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href=" ../controleur/deleteUser.php?id='.$user->getIdUser().' " >Supprimer le compte</a>
+                                        <a id="userDelete" href=" ../controleur/deleteUser.php?id='.$user->getIdUser().' "><i class="fas fa-ban"></i> Delete my account</a>
                                     </td>
                                 </tr>
                             ';
@@ -67,10 +71,8 @@
                     ?> 
                 </table>
         </div>
-
-
-    </div>
-    
+                    
+    </div>  
 
     <?php
         // if(isset($_POST['submit'])) {
@@ -84,10 +86,9 @@
         //         echo " <p>lesMots de passe ne correspondent pas</p>";
         //     }
         // }
-
-
     ?> 
-   
+
+    <?php include_once('footer.php'); ?>
 
 </body>
 </html>

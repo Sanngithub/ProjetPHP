@@ -6,9 +6,11 @@
 
         private $bdd;
 
+
         public function __construct(PDO $bdd){
             $this->setDb($bdd);
         }
+
 
         public function setDb(PDO $bdd){
             $this->bdd = $bdd;
@@ -57,6 +59,7 @@
             return $user;
         }
 
+
         public function getById($id) {
             // on s'assure que $id est bien un int
             $id = (int)$id;
@@ -91,9 +94,27 @@
         }
 
 
-        public function update(User $user){
-            // $hashedPassword = password_hash($user->getPassword(), PASSWORD_BCRYPT);
-            // $user->setPassword($hashedPassword);
+        public function updateWithoutPassword(User $user){
+
+            try{
+                $req = $this->bdd->prepare('UPDATE users SET pseudo = :pseudo, nom = :nom, prenom = :prenom, email = :email  WHERE idUser = :id');
+                $req->bindValue(':id', $user->getIdUser(), PDO::PARAM_INT);
+                $req->bindValue(':pseudo', $user->getPseudo(), PDO::PARAM_STR);
+                $req->bindValue(':email', $user->getEmail());
+                $req->bindValue(':nom', $user->getNom(), PDO::PARAM_STR);
+                $req->bindValue(':prenom', $user->getPrenom(), PDO::PARAM_STR);
+                
+                $req->execute();
+            }
+            catch(Exception $e){
+                die('Erreur : '.$e->getMessage());
+            }
+        }
+
+
+        public function updateWithPassword(User $user){
+            $hashedPassword = password_hash($user->getPassword(), PASSWORD_BCRYPT);
+            $user->setPassword($hashedPassword);
 
             try{
                 $req = $this->bdd->prepare('UPDATE users SET pseudo = :pseudo, password = :password, nom = :nom, prenom = :prenom, email = :email  WHERE idUser = :id');

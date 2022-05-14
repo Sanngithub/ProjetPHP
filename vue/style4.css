@@ -11,19 +11,13 @@
 
 body {
     min-height: 100vh;
-    /* background:url(animes2.jpg) no-repeat;
-    background-size: cover;
-    background-position: center */
     background-color: #000;
     color: #fff;
-
 }
 
 header {
     position: fixed;
     top: 0; left: 0; right: 0; 
-    /* background: rgba(145, 152, 179, 0.1); */
-    /* background: rgb(37, 90, 103); */
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(95,144,144,1) 51%, rgba(174,181,149,0.9139005944174545) 83%, rgba(150,164,167,1) 100%);
     box-shadow: 2px 2px 5px #555;
     padding:0px 7%;
@@ -47,7 +41,6 @@ header .logo span {
     font-family: 'Aclonica', sans-serif;
 }
 
-
 header .navbar ul{
     list-style: none;
 }
@@ -59,7 +52,6 @@ header .navbar ul li {
 header .navbar ul li a{
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
-    /* font-weight: bold; */
     padding:17px;
     color:#000;
     display: block;
@@ -94,12 +86,10 @@ header .navbar ul li ul li {
     background: rgb(255, 255, 255);
 }
 
-
 header .navbar ul li ul li ul {
     left : 200px;
     top :0;
 }
-
 
 header .navbar ul li:focus-within > ul,
 header .navbar ul li:hover > ul{
@@ -142,7 +132,6 @@ p {
 }
 .container-user-info {
     text-align: center;
-    background-color: red;
     margin: auto;
 }
 .bloc-info-user {
@@ -150,22 +139,30 @@ p {
     background-color: #000;
     color: #fff;
 }
-
 .bloc-info-user table {
     margin: 50px;
 }
 .bloc-info-user table tr {
     text-align: justify;
-    background-color: white;
 }
 .bloc-info-user table tr td{
-    padding: 14px 0px;
+    padding: 10px 0px;
+    font-size: 17px;
 }
-
+.bloc-info-user table tr td a{
+    text-decoration: none;
+    color: #fff;
+}
+.bloc-info-user table tr td a:hover{
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
 .bloc-info-user h1 {
     margin: 50px;
 }
-
 
 .container-add-anime {
     text-align: center;
@@ -180,6 +177,12 @@ p {
     background-color: #000;
     color: #fff;
     margin: 60px 0;
+}
+.heightextinput {
+    max-width:100%;
+    height: 90px;
+    text-align: justify;
+    
 }
 
 .bloc-animes, .bloc-animes-user {
@@ -196,10 +199,54 @@ p {
     background-color: lightcoral;
 }
 
+.container-about-us {
+    text-align: center;
+    /* background-color: red; */
+    margin: 50px 0px;
+    /* padding: 70px 10px; */
+}
+.bloc-about-us{
+    max-width: 500px;
+    display: inline-block;
+    /* background-color: blue; */
+    color: #fff;
+    margin: 100px 0px;
+    padding: 80px 10px;
+}
+.bloc-about-us h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+.bloc-about-us .text-about-us {
+    text-align: justify;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+
+.link-icon {
+    padding: 20px 10px;
+}
+.icon {
+    height: 60px;
+    width: 60px;
+}
+
 
 .title-manga {
     position: relative;
     top: 50%;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+}
+
+.footer footer{
+    color: rgb(218, 207, 207);
+    font-size: 0.7em;
 }
 
 @media(max-width:991px){
@@ -244,6 +291,51 @@ p {
 
     #menu-bar:checked ~ .navbar{
         display:initial
+    }
+    .bloc-about-us{
+        max-width: 300px;
+        display: inline-block;
+        /* background-color: blue; */
+        color: #fff;
+        margin: 60px 0px;
+        padding: 40px 10px;
+    }
+    .bloc-about-us h1 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 15px;
+    }
+    .bloc-about-us .text-about-us {
+        text-align: justify;
+        font-weight: bold;
+        font-size: 13px;
+        padding: 5px;
+    }
+    .link-icon {
+        padding: 20px 10px;
+    }
+    .icon {
+        height: 33px;
+        width: 33px;
+    }
+
+    
+    .bloc-info-user table tr td{
+        padding: 10px 0px;
+        font-size: 12px;
+    }
+
+    .bloc-info-user table tr td a:hover{
+        text-decoration: none;
+        color: #000;
+        background-color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    .bloc-info-user h1 {
+        margin: 30px;
     }
 
 }

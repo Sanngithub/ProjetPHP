@@ -11,6 +11,4 @@
     $userManager->delete($myUser);
 
     header('Location: ../vue/index.php');
-    
-
 ?> 

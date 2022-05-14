@@ -1,6 +1,6 @@
 <?php
-    require '../controleur/connexion.php';
-    require '../modele/userManager.php';
+    require_once '../controleur/connexion.php';
+    require_once '../modele/userManager.php';
     session_start();
     $userManager = new UserManager($bdd);
 
