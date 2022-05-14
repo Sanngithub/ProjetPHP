@@ -56,14 +56,36 @@
         }
         
         else {
-            $b = getimagesize($_FILES["userImage"]["tmp_name"]);
-            //Vérifiez si l'utilisateur à sélectionné une image
-            if($b !== false){
-                //Récupérer le contenu de l'image
-                $file = $_FILES['userImage']['tmp_name'];
-                // $image = addslashes(file_get_contents($file));
-                $imageData = base64_encode(file_get_contents($file));
+
+            $ret        = false;
+            $img_blob   = '';
+            $img_taille = 0;
+            $taille_max = 10000000; // FILE_MAX_SIZE = 10Mo
+            $ret        = is_uploaded_file($_FILES['userImage']['tmp_name']);
+            
+            if (!$ret) {
+                echo "Problème de transfert";
             }
+            else {
+                // Le fichier a bien été reçu
+                $img_taille = $_FILES['userImage']['size'];
+                
+                if ($img_taille > $taille_max) {
+                    echo "Fichier Trop volumineux (10Mo MAX) !";
+                }
+            }
+            
+            $img_blob = base64_encode( file_get_contents(  $_FILES['userImage']['tmp_name']    )    );
+            
+
+            // $b = getimagesize($_FILES["userImage"]["tmp_name"]);
+            // //Vérifiez si l'utilisateur à sélectionné une image
+            // if($b !== false){
+            //     //Récupérer le contenu de l'image
+            //     $file = $_FILES['userImage']['tmp_name'];
+            //     // $image = addslashes(file_get_contents($file));
+            //     $imageData = base64_encode(file_get_contents($file));
+            // }
             
             $data = [
                 'titre_native' => $_POST['titre_native'],
@@ -74,7 +96,7 @@
                 'genre' => $_POST['genre'],
                 'synopsis' => $_POST['synopsis'],
                 'nb_episodes' => $_POST['nb_episodes'],
-                'jaquette' => $imageData,
+                'jaquette' => $img_blob,
                 'createur' => $idUser
             ];
             
@@ -82,7 +104,7 @@
             $anime->hydrate($data);
             $animeManager->add($anime);
 
-            sleep(2);
+            sleep(1);
             header("Location: ../vue/animes.php");
         }     
     }
