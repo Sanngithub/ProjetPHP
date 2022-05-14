@@ -4,7 +4,7 @@
     require '../modele/userManager.php';
     $userManager = new UserManager($bdd);
 
-    $REGEX_PSEUDO = "^(?=.*[a-zA-Z])^[^ ]{3,15}$" ;
+    $REGEX_PSEUDO = "^(?=.*[a-zA-Z])(?!.*[-+_!@#$%^&*.,?])^[^ ]{3,15}$" ;
     $REGEX_PASSWORD = "^(?=.*[a-zA-Z])(?=.*\d)(?!.*[-+_!@#$%^&*.,?]).{6,35}$";
     $REGEX_EMAIL = "^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$";
 
