@@ -17,7 +17,6 @@
         public function add(Anime $anime){
             
             if ($this->isAlreadyExist($anime) === false){
-
  
                 try{
                     $req = $this->bdd->prepare('INSERT INTO animes(titre_native, titre_romaji, titre_fr, status, studio, genre, synopsis, nb_episodes, jaquette, createur)

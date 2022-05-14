@@ -1,15 +1,5 @@
 <?php
     class Anime{
-        // private int $id_anime;
-        // private String $titre_native;
-        // private String $titre_romaji;
-        // private String $titre_fr;
-        // private String $status;
-        // private String $studio;
-        // private String $genre;
-        // private String $synopsis;
-        // private int $nb_episodes;
-        // private float $note;
         private  $id_anime;
         private  $titre_native;
         private  $titre_romaji;

@@ -1,11 +1,6 @@
 <?php
     session_start();
     require('../controleur/login_verification.php');
-    // require('../controleur/connexion.php');
-    // require('../modele/animeManager.php');
-    // $animeManager = new AnimeManager($bdd);
-    // $listAnimes = $animeManager->getAll();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,22 +29,6 @@
                 <a class="link-icon"href="https://www.linkedin.com/in/" target="blank"><img class="icon" src="../pictures/linkedn_icon.png" alt="linkedn"></a>
         </div>
     </div>
-
-    <?php
-        // echo '<br><br><br>';
-        // echo '<br><br><br>';
-        // echo '<br><br><br>';
-
-        // if(isset($_SESSION)){
-        //     echo '<pre>';
-        //     print_r($_SESSION);
-        //     echo '</pre>';
-            
-        //     echo '<pre>';
-        //     print_r($_COOKIE);
-        //     echo '</pre>';
-        // }
-    ?>
 
     <?php include_once('footer.php'); ?>
 

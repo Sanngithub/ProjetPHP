@@ -13,5 +13,3 @@
     session_start();
     header("location:../vue/index.php");
 ?>
-
-

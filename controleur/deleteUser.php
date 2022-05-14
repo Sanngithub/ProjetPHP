@@ -1,5 +1,4 @@
 <?php
-
     require './connexion.php';
     require '../modele/userManager.php';
     session_start();
@@ -10,5 +9,5 @@
 
     $userManager->delete($myUser);
 
-    header('Location: ../vue/index.php');
+    header('Location: ../controleur/logout.php');
 ?> 

@@ -86,9 +86,6 @@
 
             sleep(2);
             header("Location: ../vue/animes.php");
-        }
-        
-            
+        }     
     }
-    
 ?>

@@ -6,89 +6,71 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style4.css?v=<?php echo time(); ?>">
-    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <title>SuperFilms - My Informations</title>
-</head>
-<body>
-   
-    <?php
-    include_once('header.php');
-    echo "<br><br><br><br><br><br><br><br>";
-    ?>  
-
-
-    <div class="container-user-info">
-
-        <div class="bloc-info-user">
-            
-                
-                <h1>About me</h1>
-                
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style4.css?v=<?php echo time(); ?>">
+        <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <title>SuperAnimes - My Informations</title>
+    </head>
+    <body>
     
-                <table>
-                    <?php
+        <?php
+        include_once('header.php');
+        echo "<br><br><br><br><br><br><br><br>";
+        ?>  
 
-                        foreach ($listUsers as $user) {
-                            if ($_SESSION['pseudo'] == $user->getPseudo() || $id == $user->getIdUser()) {
-                
-                                echo '
-                                <tr>
-                                    <td><i class="fas fa-user-alt"></i> my pseudo</td>
-                                    <td>'.$user->getPseudo().'</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="fas fa-envelope-open"></i> my email</td>
-                                    <td>'.$user->getEmail().'</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="fas fa-smile"></i> my name</td>
-                                    <td>'.$user->getNom().'</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="far fa-smile"></i> my firstname</td>
-                                    <td>'.$user->getPrenom().'</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a id="updateUser" href=" ./userUpdate.php?id='.$user->getIdUser().' " ><i class="far fa-edit"></i> Update my informations</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a id="userDelete" href=" ../controleur/deleteUser.php?id='.$user->getIdUser().' "><i class="fas fa-ban"></i> Delete my account</a>
-                                    </td>
-                                </tr>
-                            ';
+        <div class="container-user-info">
 
-                            }
-                        }
-                    ?> 
-                </table>
-        </div>
+            <div class="bloc-info-user">
                     
-    </div>  
+                    <h1>About me</h1>
+        
+                    <table>
+                        <?php
 
-    <?php
-        // if(isset($_POST['submit'])) {
-        //     if ( empty($_POST['verifPassword']) || ($_POST['password'] == $_POST['verifPassword']) ) {
-        //         $myUser->setPassword( MD5($_POST['password']) ) ; // hachage de mot de passes
-        //         $myUser->setPseudo($_POST['pseudo']);
-        //         $myUser->setMail($_POST['mail']);
-        //         $usersManager->update($myUser);
-        //         header('Location: users.php');
-        //     } else {
-        //         echo " <p>lesMots de passe ne correspondent pas</p>";
-        //     }
-        // }
-    ?> 
+                            foreach ($listUsers as $user) {
+                                if ($_SESSION['pseudo'] == $user->getPseudo() || $id == $user->getIdUser()) {
+                    
+                                    echo '
+                                    <tr>
+                                        <td><i class="fas fa-user-alt"></i> my pseudo</td>
+                                        <td>'.$user->getPseudo().'</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fas fa-envelope-open"></i> my email</td>
+                                        <td>'.$user->getEmail().'</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fas fa-smile"></i> my name</td>
+                                        <td>'.$user->getNom().'</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="far fa-smile"></i> my firstname</td>
+                                        <td>'.$user->getPrenom().'</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a id="updateUser" href=" ./userUpdate.php?id='.$user->getIdUser().' " ><i class="far fa-edit"></i> Update my informations</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a id="userDelete" href=" ../controleur/deleteUser.php?id='.$user->getIdUser().' "><i class="fas fa-ban"></i> Delete my account</a>
+                                        </td>
+                                    </tr>
+                                ';
 
-    <?php include_once('footer.php'); ?>
+                                }
+                            }
+                        ?> 
+                    </table>
+            </div>       
+        </div>  
 
-</body>
+        <?php include_once('footer.php'); ?>
+        
+    </body>
 </html>

@@ -20,7 +20,6 @@
                 && trim($_SESSION['email']) != ""
                 && preg_match($REGEX_EMAIL, $_SESSION['email'])
                 && $_SESSION['password'] === $_SESSION['passwordConfirmation']) {
-                // ajouter captcha
                 
                         $user = new User();
                         $user->setPseudo($_SESSION['pseudo']);

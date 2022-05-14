@@ -1,6 +1,6 @@
 <!--*************** FOOTER **********************************************************************************************************************************************************************************************************************-->
 <div class="footer">
     <footer>
-        <p class="copyright">SuperAnimes, développé par JM & BN - Tous droits réservés &copy; </p>
+        <p class="copyright">SuperAnimes, developped by JM & BN - All right reserved &copy; </p>
     </footer>
 </div>

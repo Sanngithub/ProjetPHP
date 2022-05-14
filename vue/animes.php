@@ -18,20 +18,9 @@
         <?php include_once('header.php'); ?>
 
         <div class="bloc-animes">
-                <table class="table">
-                    <thead class="table-head">
-                        <tr class="row-head">
-
-                            <th class="cell head-titre">Titre</th>
-
-                        </tr>
-                    </thead>
-
-                    <?php
-                        require_once('../controleur/populate.php');
-                    ?> 
-                </table>
-
+            <?php
+                require_once('../controleur/populateAllAnimes.php');
+            ?> 
         </div>
 
         <?php

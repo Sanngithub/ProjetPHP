@@ -54,6 +54,7 @@
     // }
     // echo '
 
+    // Code Sann avec jaquettes qui fonctionnent et rapatriées depuis le local ************************************************
     // <div class="grid">
 
     //     <div class="item">
@@ -123,6 +124,6 @@
     // </div>
     
     // ';
-
+    // fin code Sann ******************************************************************
 
 ?>
