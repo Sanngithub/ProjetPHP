@@ -56,8 +56,6 @@
         }
         
         else {
-
-            $image;
             $b = getimagesize($_FILES["userImage"]["tmp_name"]);
             //Vérifiez si l'utilisateur à sélectionné une image
             if($b !== false){

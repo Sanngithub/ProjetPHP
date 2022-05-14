@@ -41,6 +41,7 @@
             <div class="bloc-add-anime">
                 <form enctype="multipart/form-data" action="../controleur/addAnime.php" method="POST" id="form-ajouter">
                     <label>Upload Anime's cover</label><br/> 
+                    <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
                     <input type="file" name="userImage"/> 
                     <input type="text" name="titre_native" id="titre_native" placeholder="Entrez ici le titre d'origine." required maxlength="50" pattern="{1,50}" autofocus="autofocus" size="100"> <br>
                     <input type="text" name="titre_romaji" id="titre_romaji" placeholder="Entrez ici le titre en rōmaji." required maxlength="50" pattern="[A-Za-z0-9_? ]{1,50}" size="100"> <br>
