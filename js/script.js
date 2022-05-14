@@ -3,7 +3,7 @@ function verifierMdp() {
     const mdp = document.formulaire.password.value;
 
     // on teste la présence de chiffre et de lettres
-    if (mdp.search(/\d/) !== 1 && mdp.search(/[a-zA-Z]/) !== 1 ) {
+    if (mdp.search(/\d/) !== -1 && mdp.search(/[a-zA-Z]/) !== -1 ) {
         document.getElementById("case1").src = "../pictures/coche.jpg";
     } else {
         document.getElementById("case1").src = "../pictures/vide.png";
