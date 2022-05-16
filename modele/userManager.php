@@ -1,6 +1,6 @@
 <?php
 
-    require 'userClass.php';
+    require '../modele/userClass.php';
 
     class UserManager{
 

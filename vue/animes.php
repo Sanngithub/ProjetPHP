@@ -1,4 +1,5 @@
 <?php
+    require_once '../modele/userManager.php';
     session_start();
     require('../controleur/login_verification.php');
 ?>

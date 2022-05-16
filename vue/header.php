@@ -3,7 +3,7 @@
     require_once '../controleur/connexion.php';
     require_once '../modele/userManager.php';
     $userManager = new userManager($bdd);
-    $listUsers = $userManager->getAll();
+    $users = $userManager->getAll();
 ?>
 
 <header>
@@ -45,7 +45,7 @@
                     <a href="#"><?php echo $_SESSION['pseudo']?> </a>
                     <ul>
                         <?php   
-                            foreach ($listUsers as $user) {
+                            foreach ($users as $user) {
                                 if ($_SESSION['pseudo'] == $user->getPseudo()) {
                                     echo '
                                     <li id="nav_userinfo"><a href="userInfo.php?id='.$user->getIdUser().'" >About me</a></li>
@@ -53,14 +53,14 @@
                                     <li id="nav_userinfo"><a href="userAnimes.php?id='.$user->getIdUser().'" >My animes</a></li>
                                     <li id="nav_logout"><a href="../controleur/logout.php" target="_self">Logout</a></li>
                                     ';
+                                    // echo '
+                                    //     <li id="nav_userinfo"><a href="userInfo.php?id='.$_SESSION['user']->getIdUser().'" >About me</a></li>
+                                    //     <li><a href="ajouter.php?id='.$_SESSION['user']->getIdUser().'" target="_self">Add anime</a></li>
+                                    //     <li id="nav_userinfo"><a href="userAnimes.php?id='.$_SESSION['user']->getIdUser().'" >My animes</a></li>
+                                    //     <li id="nav_logout"><a href="../controleur/logout.php" target="_self">Logout</a></li>
+                                    // ';
                                 }
                             }
-                            // echo '
-                            //     <li id="nav_userinfo"><a href="user.php?id='.$_SESSION['user']->getIdUser().'" >About me</a></li>
-                            //     <li><a href="ajouter.php?id='.$_SESSION['user']->getIdUser().'" target="_self">Add anime</a></li>
-                            //     <li id="nav_userinfo"><a href="userAnimes.php?id='.$_SESSION['user']->getIdUser().'" >My animes</a></li>
-                            //     <li id="nav_logout"><a href="../controleur/logout.php" target="_self">Logout</a></li>
-                            // ';
                         ?>
                     </ul>
                 </li>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 16 mai 2022 à 13:44
+-- Généré le : lun. 16 mai 2022 à 23:22
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 7.4.27
 
@@ -83,7 +83,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`idUser`, `pseudo`, `password`, `nom`, `prenom`, `email`) VALUES
 (1, 'admin', '$2y$10$Rog2wKP4MUpVaOlR34vWI.eIJ8W4CjHR2dEbpmhvYjkTcz2S/0tNm', '', '', 'admin@superanimes.com'),
-(2, 'jon', '$2y$10$t2X8evuEXgXw/f8eou9dQeAJUpCh045QeWNi6xullUFubzaFGhTUm', 'MAROTTA', 'Jonathan', 'marotta.jonathan@superanimes.com'),
+(2, 'jon', '$2y$10$x0S9EX5xi6q00OBcW5/WsOxD6qIjvnlGwDV8R4PuCayDToKsmnxS6', 'MAROTTA', 'Jonathan', 'marotta.jonathan@superanimes.com'),
 (3, 'sann', '$2y$10$cidAAQGOU59zaIWlE6qf6uPq9b96jB.NwBgXqOuFnPF5h6Papo5qK', 'NGUYEN', 'Bernard', 'bernardnguyen@superanimes.com'),
 (4, 'DummyOne', '$2y$10$R9s2nBaUY8BDMzR4Sc4eNeoSsmBOBIkC6pleNm/HpN2KQUTDR7Zgy', 'Dummy', 'One', 'init.users@superanimes.com'),
 (5, 'DummyTwo', '$2y$10$UEwLoKZAHv1.g5zaQ0sKzu.yPww87NQfS0S6JE0kj/L/jdEBlM.qK', 'Dummy', 'Two', 'init.users@superanimes.com'),
