@@ -119,6 +119,30 @@ CSS FOR INDEX.PHP AND REGISTER.PHP
     height:15px;
 }
 
+#explicationUser{
+    display: none;
+    background-color: rgba(255,255,255, 0.6);
+    border-radius:5px;
+    padding: 10px;  
+    margin-bottom: 20px;
+}
+
+#explicationUser ul {
+    padding: 0;
+    margin:0;
+}
+
+#explicationUser li {
+    list-style: none;
+    text-align: justify;
+    font-size: 0.7em;
+    font-style: italic;
+}
+
+#explicationUser #case1user, #case2user, #case3user {
+    height:15px;
+}
+
 .error {
     font-size: 15px;
     text-align: center;
@@ -135,6 +159,22 @@ CSS FOR INDEX.PHP AND REGISTER.PHP
     font-style: italic;
 }
 .msg-valid-password{
+    display: none;
+    position: relative;
+    bottom: 11px;
+    color: gold;
+    font-size: 0.9em;
+    font-style: italic;
+}
+.msg-unvalid-pseudo{
+    display: none;
+    position: relative;
+    bottom: 11px;
+    color: red;
+    font-size: 0.9em;
+    font-style: italic;
+}
+.msg-valid-pseudo{
     display: none;
     position: relative;
     bottom: 11px;

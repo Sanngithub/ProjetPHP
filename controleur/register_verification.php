@@ -14,11 +14,11 @@
         && isset($_SESSION['email'])){
 
             if( trim($_SESSION['pseudo']) != ""
-                && preg_match($REGEX_PSEUDO, $_SESSION['pseudo'])
+                // && preg_match($REGEX_PSEUDO, $_SESSION['pseudo'])
                 && trim($_SESSION['password']) != ""
-                && preg_match($REGEX_PASSWORD, $_SESSION['password'])
+                // && preg_match($REGEX_PASSWORD, $_SESSION['password'])
                 && trim($_SESSION['email']) != ""
-                && preg_match($REGEX_EMAIL, $_SESSION['email'])
+                // && preg_match($REGEX_EMAIL, $_SESSION['email'])
                 && $_SESSION['password'] === $_SESSION['passwordConfirmation']) {
                 
                         $user = new User();

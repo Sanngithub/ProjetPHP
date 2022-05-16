@@ -41,8 +41,28 @@
                 <form id="formulaire" name="formulaire" action="" method="post" class="">
                     <span>
                         <i class='fas fa-user-alt'></i>
-                        <input type="text" placeholder="Username" name="pseudo" pattern="(?=.*[a-zA-Z])^[^ ]{3,15}" required>
+                        <input type="text" placeholder="Username" name="pseudo" onkeyup="verifierPseudo()" 
+                                    onfocus="document.getElementById('explicationUser').style.display = 'block' "
+                                    onblur="document.getElementById('explicationUser').style.display ='none'" pattern="^(?=.*[a-zA-Z])(?!.*[-+_!><:;()@#$%^&*., ?])^[^ ]{3,15}$" required>
+                                <span class="msg-unvalid-pseudo" ><br>Saisir un pseudo dans les règles et sans espaces !</span>
+                                <span class="msg-valid-pseudo" ><br>Saisie du pseudo correct correct ! <br>Le pseudo ne sera plus modifiable !</span>
                     </span><br>
+                    <div id="explicationUser">
+                        <ul>
+                            <li>
+                                <img id="case1user" src="../pictures/vide.png" alt="une case" height="30">
+                                le pseudo peut contenir des lettres et/ou des chiffres
+                            </li>
+                            <li>
+                                <img id="case2user" src="../pictures/vide.png" alt="une case" height="30">
+                                le pseudo ne doit pas contenir de caractères spéciaux
+                            </li>
+                            <li>
+                                <img id="case3user" src="../pictures/vide.png" alt="une case" height="30">
+                                le pseudo doit être compris entre 3 et 15 caractères
+                            </li>
+                        </ul>
+                    </div>
                     <span>
                         <i class='fas fa-envelope-open'></i>
                         <input type="email" placeholder="Email" name="email" required>
@@ -58,16 +78,11 @@
                     <span>
                         <i class='fas fa-lock'></i>
                         <input placeholder="Password" type="password" id="password" name="password" onkeyup="verifierMdp()" 
-                                    onfocus="document.getElementById('explication').style.display = 'block' "
-                                    onblur="document.getElementById('explication').style.display ='none'" pattern="(?=.*[a-zA-Z])(?=.*\d)(?!.*[-+_!@#$%^&*.,?]).{6,35}" required>
+                                    onfocus="document.getElementById('explication').style.display = 'block'"
+                                    onblur="document.getElementById('explication').style.display ='none'" pattern="^(?=.*[a-zA-Z])(?=.*\d)(?=.*[-+_!@#$%^&*.,?]).{6,35}$" required>
                         <span class="msg-unvalid-password" ><br>Saisir un mot de passe dans les règles !</span>
                         <span class="msg-valid-password" ><br>Saisie du mot de passe correct !</span>
                     </span><br>
-                    <span>
-                        <i class='fas fa-user-lock'></i>
-                        <input type="password" placeholder="Confirm password" name="passwordConfirmation" required>
-                    </span><br>
-
                     <div id="explication">
                         <ul>
                             <li>
@@ -80,10 +95,15 @@
                             </li>
                             <li>
                                 <img id="case3" src="../pictures/vide.png" alt="une case" height="30">
-                                le mot de passe doit être compris entre 5 et 35 caractères
+                                le mot de passe doit être compris entre 6 et 35 caractères
                             </li>
                         </ul>
                     </div>
+                    <span>
+                        <i class='fas fa-user-lock'></i>
+                        <input type="password" placeholder="Confirm password" id="passwordConfirmation" name="passwordConfirmation" required>
+                    </span><br>
+
                     <button>M'enregistrer</button>
                 </form>
 
