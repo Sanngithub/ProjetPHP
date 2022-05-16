@@ -35,23 +35,61 @@
                     ?>
                 </p>
             <br>
-
-            <h1>Add Anime</h1>
+            <div class="title-add-anime">
+                <h1>Add Anime</h1>
+            </div>
             
             <div class="bloc-add-anime">
-                <form enctype="multipart/form-data" action="../controleur/addAnime.php" method="POST" id="form-ajouter">
-                    <label>Upload Anime's cover</label><br/> 
-                    <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
-                    <input type="file" name="userImage"/> 
-                    <input type="text" name="titre_native" id="titre_native" placeholder="Entrez ici le titre d'origine." required maxlength="50" pattern="{1,50}" autofocus="autofocus" size="100"> <br>
-                    <input type="text" name="titre_romaji" id="titre_romaji" placeholder="Entrez ici le titre en rōmaji." required maxlength="50" pattern="{1,50}" size="100"> <br>
-                    <input type="text" name="titre_fr" id="titre_fr" placeholder="Entrez ici le titre en français." required maxlength="50" pattern="{1,50}" size="100"> <br>
-                    <input type="text" name="status_anime" id="status_anime" placeholder="Entrez ici le statut de l'anime (0 = en cours ; 1 = terminée)." required maxlength="1" pattern="[0-1_?]{1,1}" size="100"> <br>
-                    <input type="text" name="studio" id="studio" placeholder="Entrez ici le studio de l'anime." required maxlength="500"  size="100"> <br>
-                    <input type="text" name="genre" id="genre" placeholder="Entrez ici le(s) genre(s) de l'anime." required maxlength="500"  size="100"> <br>
-                    <input type="text" name="synopsis" id="synopsis" placeholder="Entrez ici le synopsis de l'anime." required maxlength="500"  size="100"> <br>
-                    <input type="text" name="nb_episodes" id="nb_episodes" placeholder="Entrez ici le nombre d'épisodes prévus pour cette l'anime." required maxlength="500"  size="20"> <br>
-                    <input type="submit" name="new_anime" value="Créer">
+                <form enctype="multipart/form-data" action="../controleur/addAnime.php" method="post" id="form-ajouter">
+                    <div>
+                        <label for="userImage">Image de couverture :</label>
+                        <input type="file" name="userImage" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="titre_native">Titre natif :</label>
+                        <input type="text" name="titre_native" id="titre_native" placeholder="Entrez ici le titre d'origine." maxlength="50" pattern="{1,50}" autofocus="autofocus" required> 
+                    </div>
+                    <br>
+                    <div>
+                        <label for="titre_romaji">Titre Romaji :</label>
+                        <input type="text" name="titre_romaji" id="titre_romaji" placeholder="Entrez ici le titre en rōmaji." maxlength="50" pattern="[A-Za-z0-9_? ]{1,50}" required> 
+                    </div>
+                    <br>
+                    <div>
+                        <label for="titre_fr">Titre français :</label>
+                        <input type="text" name="titre_fr" id="titre_fr" placeholder="Entrez ici le titre en français."  maxlength="50" pattern="[A-Za-z0-9_? ]{1,50}" required> 
+                    </div>
+                    <br>
+                    <div>
+                        <label for="status_anime">Statut de l'anime :</label>
+                        <input type="text" name="status_anime" id="status_anime" placeholder="Entrez ici le statut de l'anime (0 = en cours ; 1 = terminée)."  maxlength="1" pattern="[0-1_?]{1,1}" required> 
+                    </div>
+                    <br>
+                    <div>
+                        <label for="studio">Nom du studio :</label>
+                        <input type="text" name="studio" id="studio" placeholder="Entrez ici le studio de l'anime." maxlength="500"  > 
+                    </div>
+                    <br>
+                    <div>
+                        <label for="nb_episodes">Nombre d'épisodes :</label>
+                        <input type="text" name="nb_episodes" id="nb_episodes" placeholder="Entrez ici le nombre d'épisodes prévus pour cette l'anime."  maxlength="500" required > 
+                    </div>
+                    <br>
+                    <div>
+                        <label for="genre">Genre(s) :</label>
+                        <input type="text" name="genre" id="genre" placeholder="Entrez ici le(s) genre(s) de l'anime." maxlength="500"  required> 
+                    </div>
+                    <br>
+                    <div>
+                        <label for="synopsis" class="synopsis">Synopsis :</label>
+                        <textarea name="synopsis" id="synopsis" class="textarea medium" tabindex="1003" maxlength="600" aria-required="true" aria-invalid="false" rows="10" cols="100" placeholder="Entrez ici le synopsis de l'anime." required ></textarea> 
+                    </div>
+                    <br>
+                    <div class="div-button-add-anime">
+                        <input class="button-add-anime" type="submit" name="new_anime" value="click to create">
+                        <!-- <button>click to add</button> -->
+                    </div>
                 </form>
             </div>
         </div>
