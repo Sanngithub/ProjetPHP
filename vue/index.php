@@ -47,6 +47,7 @@
                                 $_SESSION['password'] = $_POST['password'];
                                 $_SESSION['keeplogged'] = $_POST['keeplogged'];
                                 header("location:../controleur/login.php");
+                                die();
                             }
                             if(isset($_SESSION['error_login'])){
                                 echo '<br>'.$_SESSION['error_login'].'<br><br>';

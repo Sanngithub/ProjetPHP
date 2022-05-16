@@ -10,4 +10,5 @@
     $userManager->delete($myUser);
 
     header('Location: ../controleur/logout.php');
+    die();
 ?> 

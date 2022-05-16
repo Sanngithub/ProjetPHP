@@ -17,10 +17,12 @@
             session_unset();
             $_SESSION['error_login'] = 'Identifiant ou mot de passe incorrect(s) OU utilisateur inexistant !';
             header('location:../vue/index.php');
+            die();
         } 
     }
     else{
         $_SESSION['error_login'] = 'Veuillez remplir le formulaire !';
         header('location:../vue/index.php');
+        die();
     }
 ?>

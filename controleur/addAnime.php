@@ -7,29 +7,6 @@
     $userManager = new UserManager($bdd);
     $listUsers = $userManager->getAll();
     $listAnimes = $animeManager->getAll();
-    // $id = $_GET['id'];
-
-    // echo '<pre>';
-    // print_r($_SESSION['anime']);
-    // echo '</pre>';
-
-    // if( isset($_SESSION['anime']) ){
-    //     if($animeed = $animeManager.add($_SESSION['anime'])){
-    //         header('location:../vue/ajouter.php?dbMessage=Anime ajoutée !');
-    //         die();
-    //     }
-    //     else{
-    //         session_unset();
-    //         $_SESSION['error_addAnime'] = 'Erreur : Anime déjà présente------ !';
-    //         header('location:../vue/ajouter.php');
-    //     } 
-    // }
-    // else{
-    //     $_SESSION['error_addAnime'] = 'Veuillez remplir le formulaire !';
-    //     header('location:../vue/ajouter.php');
-    // }
-    // echo "ok";
-    // sleep(5);
     
     if(isset($_POST['new_anime'])) {
         // echo $_POST["titre"];
@@ -51,6 +28,7 @@
         if ($animeEstDejaPresent) {
             $_SESSION['error_addAnime'] = 'Erreur : Anime déjà présente------ !';
             header('location:../vue/ajouter.php?id=<php echo $idUser?>');
+            die();
         }
         
         else {
@@ -92,8 +70,8 @@
             $anime->hydrate($data);
             $animeManager->add($anime);
 
-            sleep(1);
             header("Location: ../vue/animes.php");
+            die();
         }     
     }
 ?>

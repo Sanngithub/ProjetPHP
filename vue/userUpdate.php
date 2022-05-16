@@ -1,8 +1,7 @@
 <?php
     session_start();    
-    require('../controleur/login_verification.php');
+    require '../controleur/login_verification.php';
     require '../controleur/connexion.php';
-
     $id = $_GET['id'];
 ?> 
 <!DOCTYPE html>
@@ -12,23 +11,21 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style4.css?v=<?php echo time(); ?>">
-        <title>SuperFilms - My Informations</title>
+        <title>SuperAnimes - My Informations</title>
     </head>
     <body>
 
         <?php 
             include_once('header.php');
-            $usersManager = new userManager($bdd);
-            $myUser = $usersManager->getById($id);
+            $myUser = $userManager->getById($id);
         ?>
-
         <div class="bloc-user-update">
 
             <h1>Enter new informations</h1>
 
-            <form action="" method="post">
+            <form action="../controleur/updateUser.php" method="post">
             
-                <input type="hidden" value=<?php echo $myUser->getIdUser()?>>
+                <input type="hidden" name="id" value=<?php echo $myUser->getIdUser()?>>
 
                 <p for="pseudo">Pseudo</p>
                 <input type="text" id="pseudo" name="pseudo" value="<?php echo $myUser->getPseudo()?>">
@@ -57,18 +54,6 @@
                     if(isset($_SESSION['error_updateUser'])){echo '<br>'.$_SESSION['error_updateUser'].'<br><br>';}
                 ?>
             </p>
-
-            <?php
-
-                if($_SERVER['REQUEST_METHOD'] == 'POST') {
-                    $myUser->setEmail($_POST['mail']);
-                    $myUser->setNom($_POST['nom']);
-                    $myUser->setPrenom($_POST['prenom']);
-
-                    header("location:../controleur/updateUser.php");
-                }
-            ?> 
         </div>
-
     </body>
 </html>

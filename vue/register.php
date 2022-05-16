@@ -31,6 +31,7 @@
                                 $_SESSION['prenom'] = $_POST['prenom'];
 
                                 header("location:../controleur/register_verification.php");
+                                die();
                             }
                             if(isset($_SESSION['error_register'])){echo $_SESSION['error_register'];}
                         ?>

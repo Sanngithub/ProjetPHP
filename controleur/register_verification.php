@@ -36,6 +36,7 @@
                         else{
                             $_SESSION['error_register'] = "Pseudo déjà utilisé !";
                             header('location:../vue/register.php');
+                            die();
                         }
             }
     }
@@ -50,9 +51,11 @@
         
         $_SESSION['error_register'] = "Les mots de passent que vous avez saisi ne sont pas identiques !";
         header('location:../vue/register.php');
+        die();
     }
     else{
         $_SESSION['error_register'] = "Veuillez remplir le formulaire d\'enregistrement avec les informations requises !";
         header('location:../vue/register.php');
+        die();
     }
 ?>

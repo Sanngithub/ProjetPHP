@@ -12,4 +12,5 @@
     session_write_close();
     session_start();
     header("location:../vue/index.php");
+    die();
 ?>
