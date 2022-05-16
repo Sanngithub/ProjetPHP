@@ -52,25 +52,21 @@
                 <button type="submit" name="submit" >click to modify</button>
             </form>
 
+            <p id="error" class="error">
+                <?php
+                    if(isset($_SESSION['error_updateUser'])){echo '<br>'.$_SESSION['error_updateUser'].'<br><br>';}
+                ?>
+            </p>
+
             <?php
 
                 if($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $myUser->setEmail($_POST['mail']);
                     $myUser->setNom($_POST['nom']);
                     $myUser->setPrenom($_POST['prenom']);
-                    if(empty($_POST['verifPassword'])){
-                        $myUser->setPassword(   $myUser->getPassword()  );
-                        $usersManager->updateWithoutPassword($myUser);
-                    }
-                    else if (  !empty($_POST['verifPassword'])   &&  $_POST['password'] == $_POST['verifPassword'] ) {
-                        $myUser->setPassword(   $_POST['password']    );
-                        $usersManager->updateWithPassword($myUser);
-                    }
-                    header("location:../vue/userInfo.php?id=");
-                    }
-                    else {
-                        echo " <p>lesMots de passe ne correspondent pas</p>";
-                    }
+
+                    header("location:../controleur/updateUser.php");
+                }
             ?> 
         </div>
 
