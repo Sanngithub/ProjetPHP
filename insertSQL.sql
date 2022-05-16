@@ -1,4 +1,4 @@
-ALTER TABLE `table_name` AUTO_INCREMENT=1
+-- ALTER TABLE `table_name` AUTO_INCREMENT=1
 
 INSERT INTO `user`(`pseudo`,`password`,`nom`,`prenom`,`email`)
     VALUES  ('admin','Passw0rd!','','','admin@superanimes.com'),
