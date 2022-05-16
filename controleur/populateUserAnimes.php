@@ -1,33 +1,20 @@
 <?php
     require '../modele/animeManager.php';
     $animeManager = new AnimeManager($bdd);
-    $listAnimesManager = $animeManager->getAll();
-    $tabIdDesAnimesDeUser = [];
+    $animes = $animeManager->getAll();
     
-    foreach($listAnimesManager as $anime){
+    echo '<div class="grid">';
+
+    foreach($animes as $anime){
         
+            if ($id == $anime->getCreateur()) {
+            echo "<div class=\"item\">";
+            echo    "<a href= \"\"><img src='data:image/jpeg;base64," . $anime->getJaquette() . "' alt = \"" . $anime->getTitre_fr() . "\"></a>";
+            echo    "<p>" . $anime->getTitre_fr() . "</p>";
+            echo "</div>";
+            }
         
-        if ($id == $anime->getCreateur()) {
-            echo '<table>';
-            echo '
-                <tr>
-                    <td> id_anime </td>
-                    <td> '.$anime->getId_anime().' </td>
-                </tr>
-                <tr>
-                    <td> titre_native </td>
-                    <td> '.$anime->getTitre_native().' </td>
-                </tr>
-                <tr>
-                    <td> titre_romaji </td>
-                    <td> '.$anime->getTitre_romaji().' </td>
-                </tr>
-                <tr>
-                    <td> titre_fr </td>
-                    <td> '.$anime->getTitre_fr().' </td>
-                </tr>
-            ';
-            echo '</table>';
-        }
     }
+
+    echo "</div>";
 ?> 

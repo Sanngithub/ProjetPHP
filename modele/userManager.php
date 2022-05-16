@@ -134,7 +134,7 @@
 
 
         public function delete(User $user){
-            $this->bdd->exec('DELETE FROM users WHERE idUser = '.$user->getIdUser());
+            $this->bdd->exec('DELETE FROM users WHERE idUser = ' . $user->getIdUser() );
         }
         
 

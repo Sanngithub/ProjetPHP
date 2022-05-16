@@ -49,10 +49,8 @@
         }
 
         if ($animeEstDejaPresent) {
-               
             $_SESSION['error_addAnime'] = 'Erreur : Anime déjà présente------ !';
             header('location:../vue/ajouter.php?id=<php echo $idUser?>');
-
         }
         
         else {
@@ -76,16 +74,6 @@
             }
             
             $img_blob = base64_encode( file_get_contents(  $_FILES['userImage']['tmp_name']    )    );
-            
-
-            // $b = getimagesize($_FILES["userImage"]["tmp_name"]);
-            // //Vérifiez si l'utilisateur à sélectionné une image
-            // if($b !== false){
-            //     //Récupérer le contenu de l'image
-            //     $file = $_FILES['userImage']['tmp_name'];
-            //     // $image = addslashes(file_get_contents($file));
-            //     $imageData = base64_encode(file_get_contents($file));
-            // }
             
             $data = [
                 'titre_native' => $_POST['titre_native'],
