@@ -1,6 +1,20 @@
-INSERT INTO `user`(`pseudo`,`password`,`nom`,`prenom`,`email`) VALUES ('sann','1234','MAROTTA','Bernard','bernard@gmail.com'), ('jon','456789','','','test@test.com');
+ALTER TABLE `table_name` AUTO_INCREMENT=1
 
-INSERT INTO `film`(`titre`,`synopsis`,`realisateur`,`anneeProduction`) VALUES ('300','300 soldats','Zack Snyder',2007), ('Avatar','Jake Sully chez les schtroumpfs','James Cameron',2009);
+INSERT INTO `user`(`pseudo`,`password`,`nom`,`prenom`,`email`)
+    VALUES  ('admin','Passw0rd!','','','admin@superanimes.com'),
+            ('jon','sup3rp@ssword','MAROTTA','Jonathan','marotta.jonathan@superanimes.com'),
+            ('sann','MyPa$$word1','NGUYEN','Bernard','nguyen.bernard@superanimes.com'),
+            ('DummyOne','azerty_1','Dummy','One','init.users@superanimes.com'),
+            ('DummyTwo','azerty_1','Dummy','Two','init.users@superanimes.com'),
+            ('DummyThree','azerty_1','DumDum','Trois','init.users@superanimes.com'),
+            ('DummyFour','azerty_1','StupidDummy','4','init.users@superanimes.com'),
+            ('DummyFive','azerty_1','no','brain','init.users@superanimes.com'),
+            ('DummySix','azerty_1','Six','','init.users@superanimes.com'),
+            ('DummySeven','azerty_1','','Seven','init.users@superanimes.com'),
+            ('DummyEight','azerty_1','','','init.users@superanimes.com'),
+            ('DummyNine','azerty_1','','','init.users@superanimes.com'),
+            ('DummyTen','azerty_1','','','init.users@superanimes.com'),
+
 
 INSERT INTO `animes` (`id_anime`, `titre_native`, `titre_romaji`, `titre_fr`, `status`, `studio`, `genre`, `synopsis`, `nb_episodes`, `note`) VALUES
 (1, '進撃の巨人', 'Shingeki no Kyojin', "L'Attaque des Titans", 1 , 'Wit Studio', 'Action, Drama, Fantasy, Mystery', "Dans un monde ravagé par des titans mangeurs d’homme depuis plus d’un siècle, les rares survivants de l’Humanité n’ont d’autre choix pour survivre que de se barricader dans une cité-forteresse. Le jeune Eren, témoin de la mort de sa mère dévorée par un titan, n’a qu’un rêve : entrer dans le corps d’élite chargé de découvrir l’origine des titans, et les annihiler jusqu’au dernier…", 25, 0),

@@ -44,8 +44,8 @@
                     <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
                     <input type="file" name="userImage"/> 
                     <input type="text" name="titre_native" id="titre_native" placeholder="Entrez ici le titre d'origine." required maxlength="50" pattern="{1,50}" autofocus="autofocus" size="100"> <br>
-                    <input type="text" name="titre_romaji" id="titre_romaji" placeholder="Entrez ici le titre en rōmaji." required maxlength="50" pattern="[A-Za-z0-9_? ]{1,50}" size="100"> <br>
-                    <input type="text" name="titre_fr" id="titre_fr" placeholder="Entrez ici le titre en français." required maxlength="50" pattern="[A-Za-z0-9_? ]{1,50}" size="100"> <br>
+                    <input type="text" name="titre_romaji" id="titre_romaji" placeholder="Entrez ici le titre en rōmaji." required maxlength="50" pattern="{1,50}" size="100"> <br>
+                    <input type="text" name="titre_fr" id="titre_fr" placeholder="Entrez ici le titre en français." required maxlength="50" pattern="{1,50}" size="100"> <br>
                     <input type="text" name="status_anime" id="status_anime" placeholder="Entrez ici le statut de l'anime (0 = en cours ; 1 = terminée)." required maxlength="1" pattern="[0-1_?]{1,1}" size="100"> <br>
                     <input type="text" name="studio" id="studio" placeholder="Entrez ici le studio de l'anime." required maxlength="500"  size="100"> <br>
                     <input type="text" name="genre" id="genre" placeholder="Entrez ici le(s) genre(s) de l'anime." required maxlength="500"  size="100"> <br>
