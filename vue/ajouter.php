@@ -68,7 +68,7 @@
                     <br>
                     <div>
                         <label for="studio">Nom du studio :</label>
-                        <input type="text" name="studio" id="studio" placeholder="Entrez ici le studio de l'anime." maxlength="500"  > 
+                        <input type="text" name="studio" id="studio" placeholder="Entrez ici le studio de l'anime." maxlength="500" required> 
                     </div>
                     <br>
                     <div>
@@ -83,7 +83,7 @@
                     <br>
                     <div>
                         <label for="synopsis" class="synopsis">Synopsis :</label>
-                        <textarea name="synopsis" id="synopsis" class="textarea medium" tabindex="1003" maxlength="600" aria-required="true" aria-invalid="false" rows="10" cols="100" placeholder="Entrez ici le synopsis de l'anime." required ></textarea> 
+                        <textarea name="synopsis" id="synopsis" class="textarea medium" tabindex="1003" maxlength="1000" aria-required="true" aria-invalid="false" rows="10" cols="100" placeholder="Entrez ici le synopsis de l'anime." required ></textarea> 
                     </div>
                     <br>
                     <div class="div-button-add-anime">

@@ -22,14 +22,18 @@
                     <ul>
                         <li><a href="animes.php?genre=Action">Action</a></li>
                         <li><a href="animes.php?genre=Adventure">Adventure</a></li>
-                        <li><a href="animes.php?genre=Chinese">Chinese</a></li>
                         <li><a href="animes.php?genre=Comedy">Comedy</a></li>
                         <li><a href="animes.php?genre=Drama">Drama</a></li>
                         <li><a href="animes.php?genre=Ecchi">Ecchi</a></li>
+                        <li><a href="animes.php?genre=Fantasy">Fantasy</a></li>
                         <li><a href="animes.php?genre=Hentai">Hentai</a></li>
-                        <li><a href="animes.php?genre=Seinen">Seinen</a></li>
-                        <li><a href="animes.php?genre=Shonen">Shonen</a></li>
-                        <li><a href="animes.php?genre=Shonen">Sport</a></li>
+                        <li><a href="animes.php?genre=Mahou Shoujo">Mahou Shoujo</a></li>
+                        <li><a href="animes.php?genre=Mystery">Mystery</a></li>
+                        <li><a href="animes.php?genre=Psychological">Psychological</a></li>
+                        <li><a href="animes.php?genre=Romance">Romance</a></li>
+                        <li><a href="animes.php?genre=Sports">Sports</a></li>
+                        <li><a href="animes.php?genre=Supernatural">Supernatural</a></li>
+                        <li><a href="animes.php?genre=Thriller">Thriller</a></li>
                     </ul>
                 </li>
 

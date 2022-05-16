@@ -24,20 +24,6 @@
             ?> 
         </div>
 
-        <?php
-            echo '<br><br><br>';
-
-            if(isset($_SESSION)){
-                echo '<pre>';
-                print_r($_SESSION);
-                echo '</pre>';
-                
-                echo '<pre>';
-                print_r($_COOKIE);
-                echo '</pre>';
-            }
-        ?>
-
         <?php include_once('footer.php'); ?>
         
     </body>
