@@ -5,21 +5,20 @@
     require '../modele/userManager.php';
     $animeManager = new AnimeManager($bdd);
     $userManager = new UserManager($bdd);
-    $listUsers = $userManager->getAll();
-    $listAnimes = $animeManager->getAll();
+    $users = $userManager->getAll();
+    $animes = $animeManager->getAll();
     
     if(isset($_POST['new_anime'])) {
-        // echo $_POST["titre"];
         $idUser;
         $animeEstDejaPresent = false;
 
-        foreach ($listAnimes as $_anime){
+        foreach ($animes as $_anime){
             if ($_anime->getTitre_native() == $_POST['titre_native'] || $_anime->getTitre_romaji() == $_POST['titre_romaji'] || $_anime->getTitre_fr() == $_POST['titre_fr']) {
                 $animeEstDejaPresent = true;
             }
         }
 
-        foreach ($listUsers as $user){
+        foreach ($users as $user){
             if ($_SESSION['pseudo'] == $user->getPseudo()) {
                 $idUser = $user->getIdUser();
             }
@@ -32,7 +31,6 @@
         }
         
         else {
-
             $ret        = false;
             $img_blob   = '';
             $img_taille = 0;

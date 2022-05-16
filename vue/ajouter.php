@@ -88,7 +88,6 @@
                     <br>
                     <div class="div-button-add-anime">
                         <input class="button-add-anime" type="submit" name="new_anime" value="click to create">
-                        <!-- <button>click to add</button> -->
                     </div>
                 </form>
             </div>

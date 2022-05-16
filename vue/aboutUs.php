@@ -19,8 +19,8 @@
         <div class="bloc-about-us">
             <h1>About us</h1> <br>
             <p class="text-about-us">
-                Hello ! we are two students in the DUT IT Special Year, Jonathan and Bernard. You are currently visiting our project developed in PHP, HTML, CSS and JavaScript.
-                Do not hesitate to contact us ! We invite you to join us also on social networks.
+                Hello ! we are two students in the DUT IT Special Year, Jonathan and Bernard. You are currently visiting our project developped in PHP, HTML, CSS and JavaScript.
+                Do not hesitate to contact us ! We also invite you to join us on social networks.
             </p>
             <br>
                 <a class="link-icon"href="https://github.com/" target="blank"  ><img class="icon" src="../pictures/github.png" alt="github"></a>
