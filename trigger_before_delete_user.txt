@@ -1,0 +1,5 @@
+CREATE TRIGGER before_delete_user
+BEFORE DELETE ON users
+FOR EACH ROW
+	UPDATE animes SET animes.createur = 1
+	WHERE animes.createur = OLD.idUser;
