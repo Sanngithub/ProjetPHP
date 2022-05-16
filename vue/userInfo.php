@@ -30,7 +30,6 @@
         
                     <table>
                         <?php
-
                             foreach ($users as $user) {
                                 if ($_SESSION['pseudo'] == $user->getPseudo() || $id == $user->getIdUser()) {
                     

@@ -57,12 +57,6 @@
                                     <li id="nav_userinfo"><a href="userAnimes.php?id='.$user->getIdUser().'" >My animes</a></li>
                                     <li id="nav_logout"><a href="../controleur/logout.php" target="_self">Logout</a></li>
                                     ';
-                                    // echo '
-                                    //     <li id="nav_userinfo"><a href="userInfo.php?id='.$_SESSION['user']->getIdUser().'" >About me</a></li>
-                                    //     <li><a href="ajouter.php?id='.$_SESSION['user']->getIdUser().'" target="_self">Add anime</a></li>
-                                    //     <li id="nav_userinfo"><a href="userAnimes.php?id='.$_SESSION['user']->getIdUser().'" >My animes</a></li>
-                                    //     <li id="nav_logout"><a href="../controleur/logout.php" target="_self">Logout</a></li>
-                                    // ';
                                 }
                             }
                         ?>
