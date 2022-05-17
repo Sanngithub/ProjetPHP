@@ -62,7 +62,7 @@
         public function getAll(){
             $animes = [];
 
-            $req = $this->bdd->prepare('SELECT * FROM animes');
+            $req = $this->bdd->prepare('SELECT * FROM animes ORDER BY titre_fr');
             $req->execute();
 
             while($donnees = $req->fetch(PDO::FETCH_ASSOC)){
@@ -79,7 +79,7 @@
 
             $regexLIKE = '%'.$titre.'%';
 
-            $req = $this->bdd->prepare('SELECT * FROM animes WHERE titre_native LIKE :titre_native OR titre_romaji LIKE :titre_romaji OR titre_fr LIKE :titre_fr');
+            $req = $this->bdd->prepare('SELECT * FROM animes WHERE titre_native LIKE :titre_native OR titre_romaji LIKE :titre_romaji OR titre_fr LIKE :titre_fr ORDER BY titre_fr');
             $req->bindValue(':titre_native', $regexLIKE, PDO::PARAM_STR);
             $req->bindValue(':titre_romaji', $regexLIKE, PDO::PARAM_STR);
             $req->bindValue(':titre_fr', $regexLIKE, PDO::PARAM_STR);
@@ -99,7 +99,7 @@
 
             $regexLIKE = '%'.$genre.'%';
 
-            $req = $this->bdd->prepare('SELECT * FROM animes WHERE genre LIKE ?');
+            $req = $this->bdd->prepare('SELECT * FROM animes WHERE genre LIKE ? ORDER BY titre_fr');
             $req->execute(array($regexLIKE));
             $req->execute();
 
