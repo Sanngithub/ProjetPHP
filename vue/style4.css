@@ -429,6 +429,9 @@ img {
     font-weight: bold;
     padding: 4px;
 }
+#Global #droite ul li .download-torrent{
+    color: rgb(78, 197, 234);
+}
 
 
 #Global #droite ul li a:hover{
@@ -577,7 +580,6 @@ img {
     overflow-y: scroll;
     height: 800px;
 }
-
 
 
 @media(max-width:991px){

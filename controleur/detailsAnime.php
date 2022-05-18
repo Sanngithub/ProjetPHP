@@ -32,6 +32,9 @@
                                     <label for="">Synopsis :</label>
                                     <p>'. $anime->getSynopsis() .'</p>
                                 </li>
+                                <li>
+                                <a class="download-torrent" href="../pictures/anime.torrent"><i class="fa fa-arrow-circle-down"></i> Download here</a>
+                                </li>
                 ';
                                 if($anime->getCreateur() == $_SESSION['user']->getIdUser()){
                                     echo '
