@@ -32,14 +32,19 @@
                                     <label for="">Synopsis :</label>
                                     <p>'. $anime->getSynopsis() .'</p>
                                 </li>
-                                <li>
-                                <a id="update" href=""><i class="fas fa-ban"></i> Update</a>
-                                </li>
-                                <span class="forbbiden-del-user"><i class="fas fa-ban"></i> By clicking on "delete", this anime will be immediately deleted without confirmation !</span>
-                                <li>
-                                    <a href="../controleur/deleteAnime.php?id='.$anime->getId_anime().'">Delete this anime</a>
-                                    <br><br><p class="error">'. $_GET['error_animeDetail'] .'</p>
-                                </li>
+                ';
+                                if($anime->getCreateur() == $_SESSION['user']->getIdUser()){
+                                    echo '
+                                        <li>
+                                        <a id="update" href=""><i class="far fa-edit"></i> Update</a>
+                                        </li>
+                                        <li class="forbbiden-del-user"><i class="fas fa-ban"></i> By clicking on "delete", this anime will be immediately deleted without confirmation !</li>
+                                        <li>
+                                            <a href="../controleur/deleteAnime.php?id='.$anime->getId_anime().'"><i class="fas fa-ban"></i> Delete this anime</a>
+                                        </li>
+                                        ';
+                                }
+            echo '
                         </ul>
                         
                     </div>

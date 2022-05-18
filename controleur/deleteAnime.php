@@ -14,7 +14,7 @@
     }
 
     $error_animeDetail = "erreur : vous ne pouvez pas supprimer une anime que vous n'avez pas créé !";
-    $url = "../vue/animeDetails.php?id="    .   $id .   "&error_animeDetail="   .   $error_animeDetail;
+    $url = "../vue/animeDetails.php?id="    .   $id;
     header("Location: $url");
     die();
 ?> 
