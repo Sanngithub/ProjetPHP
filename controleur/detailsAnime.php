@@ -37,8 +37,10 @@
                                 </li>
                                 <li>
                                     <a href="../controleur/deleteAnime.php?id='.$anime->getId_anime().'">Delete Immediatly, take care !</a>
+                                    <br><br><p class="error">'. $_GET['error_animeDetail'] .'</p>
                                 </li>
                         </ul>
+                        
                     </div>
                 </div>
             ';

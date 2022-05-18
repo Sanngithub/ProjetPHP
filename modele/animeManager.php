@@ -153,7 +153,13 @@
 
 
         public function delete(Anime $anime){
-            $this->bdd->exec('DELETE FROM animes WHERE id_anime = '.$anime->getId_anime());
+            try {
+                $req = $this->bdd->prepare( 'DELETE FROM animes WHERE id_anime = :id ');
+                $req->bindValue(':id', $anime->getId_anime(), PDO::PARAM_INT);
+                $req->execute();
+            } catch (Exception $e) {
+                die('Erreur : '.$e->getMessage());
+            }
         }
 
 
