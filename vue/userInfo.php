@@ -18,7 +18,6 @@
     
         <?php
         include_once('header.php');
-        echo "<br><br><br><br><br><br><br><br>";
         ?>  
 
         <div class="container-user-info">
@@ -56,11 +55,15 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a id="userDelete" href=" ../controleur/deleteUser.php?id='.$user->getIdUser().' "><i class="fas fa-ban"></i> Delete my account</a>
+                                            <span class="forbbiden-del-user"><i class="fas fa-ban"></i> By clicking on "delete", your account will be immediately deleted without confirmation !</span>
                                         </td>
                                     </tr>
-                                ';
-
+                                    <tr>
+                                        <td>
+                                        <a id="userDelete" href="../controleur/deleteUser.php?id='.$user->getIdUser().'"><i class="fas fa-ban"></i> Delete my account</a>
+                                        </td>
+                                    </tr>
+                                    ';
                                 }
                             }
                         ?> 

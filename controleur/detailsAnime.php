@@ -33,10 +33,11 @@
                                     <p>'. $anime->getSynopsis() .'</p>
                                 </li>
                                 <li>
-                                    <a href="">Update</a>
+                                <a id="update" href=""><i class="fas fa-ban"></i> Update</a>
                                 </li>
+                                <span class="forbbiden-del-user"><i class="fas fa-ban"></i> By clicking on "delete", this anime will be immediately deleted without confirmation !</span>
                                 <li>
-                                    <a href="../controleur/deleteAnime.php?id='.$anime->getId_anime().'">Delete Immediatly, take care !</a>
+                                    <a href="../controleur/deleteAnime.php?id='.$anime->getId_anime().'">Delete this anime</a>
                                     <br><br><p class="error">'. $_GET['error_animeDetail'] .'</p>
                                 </li>
                         </ul>

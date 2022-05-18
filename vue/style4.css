@@ -440,6 +440,7 @@ img {
 }
 .forbbiden-del-user {
     color: red;
+    font-size: 12px;
 }
 @media(max-width:991px){
     header {
