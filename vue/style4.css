@@ -8,13 +8,11 @@
     text-decoration: none;
 }
 
-
 body {
     min-height: 100vh;
     background-color: #000;
     color: #fff;
 }
-
 
 header {
     position: fixed;
@@ -28,7 +26,6 @@ header {
     z-index: 1000;
 }
 
-
 header .logo {
     font-weight: bold;
     font-size: 25px;
@@ -36,8 +33,6 @@ header .logo {
     text-decoration: none;
     font-family: 'Aclonica', sans-serif;
 }
-
-
 header .logo span {
     font-weight: bold;
     font-size: 25px;
@@ -45,17 +40,13 @@ header .logo span {
     font-family: 'Aclonica', sans-serif;
 }
 
-
 header .navbar ul{
     list-style: none;
 }
-
-
 header .navbar ul li {
     position: relative;
     float: left;
 }
-
 
 header .navbar ul li a{
     font-family: 'Poppins', sans-serif;
@@ -65,13 +56,11 @@ header .navbar ul li a{
     display: block;
 }
 
-
 header .navbar ul li a:hover{
     border-radius: 4px;
     background-color:#308491 ;
     color: #fff;
 }
-
 
 header .navbar ul li ul {
     position: absolute;
@@ -80,7 +69,6 @@ header .navbar ul li ul {
     background-color: #fff;
     display:none;
 }
-
 
 header .navbar ul li ul input{
     border: none;
@@ -91,30 +79,25 @@ header .navbar ul li ul input{
     font-size: 18px;
 }
 
-
 header .navbar ul li ul li {
     width: 100%;
     border-top: 1px solid rgba(0,0,0,.1);
     background: rgb(255, 255, 255);
 }
 
-
 header .navbar ul li ul li ul {
     left : 200px;
     top :0;
 }
-
 
 header .navbar ul li:focus-within > ul,
 header .navbar ul li:hover > ul{
     display: initial;
 }
 
-
 #menu-bar {
     display: none;
 }
-
 
 header label {
     font-size: 20px;
@@ -122,7 +105,6 @@ header label {
     cursor: pointer;
     display: none;
 }
-
 
 .grid {
     max-width: 1300;
@@ -136,7 +118,6 @@ header label {
     background: #000;
 }
 
-
 img {
     width: 200px;
     height: 300px;
@@ -144,43 +125,30 @@ img {
     object-position: center;
 }
 
-
 .container-user-info {
     text-align: center;
     margin: auto;
     margin-top: 100px;
 }
-
-
 .bloc-info-user {
     display: inline-block;
     background-color: #000;
     color: #fff;
 }
-
-
 .bloc-info-user table {
     margin: 50px;
 }
-
-
 .bloc-info-user table tr {
     text-align: justify;
 }
-
-
 .bloc-info-user table tr td{
     padding: 10px 0px;
     font-size: 17px;
 }
-
-
 .bloc-info-user table tr td a{
     text-decoration: none;
     color: #fff;
 }
-
-
 .bloc-info-user table tr td a:hover{
     text-decoration: none;
     color: #000;
@@ -188,49 +156,34 @@ img {
     border-radius: 4px;
     cursor: pointer;
 }
-
-
 .bloc-info-user h1 {
     margin: 50px;
     font-family: 'Aclonica', sans-serif;
 }
-
 
 .container-add-anime{
     text-align: center;
     margin: auto;
     margin-top: 50px;
 }
-
-
 .bloc-add-anime, .bloc-user-update {
     display: inline-block;
     background-color: #000;
     color: #fff;
 }
-
-
 .title-add-anime {
     margin: 10px;
 }
-
-
 .title-add-anime h1, .title-user-update h1 {
     font-family: 'Aclonica', sans-serif;
 }
-
-
 .bloc-add-anime form{
     margin:5px;
 }
-
-
 .bloc-add-anime form div{
     margin:3px;
     display: flex;
 }
-
-
 .bloc-add-anime form div input, textarea{
     width: 100%;
     border: none;
@@ -239,70 +192,49 @@ img {
     padding: 5px;
     font-size: 13px;
 }
-
-
 .bloc-add-anime form div label{
     width: 25%;
     font-size: 13px;
     padding: 5px;
     text-align: left;
 }
-
-
 .bloc-add-anime form .div-button-add-anime{
     display: block;
 }
-
-
 .bloc-add-anime form div .button-add-anime {
     width:150px;
 }
-
-
 .synopsis {
     vertical-align: top;
 }
-
-
 #synopsis {
     padding: 5px;
     font-size: 13px;
 }
-
 
 .container-user-update {
     text-align: center;
     margin: auto;
     margin-top: 150px;
 }
-
-
 .bloc-user-update {
     display: inline-block;
     background-color: #000;
     color: #fff;
     margin-top: 40px;
 }
-
-
 .bloc-user-update form {
     width: 100%;
 }
-
-
 .bloc-user-update form div {
     display: flex;
     margin: 5px 0px;
 }
-
-
 .bloc-user-update form div label {
     width: 25%;
     font-size: 13px;
     text-align: left;
 }
-
-
 .bloc-user-update form div input{
     width: 75%;
     border: none;
@@ -311,15 +243,11 @@ img {
     padding: 5px;
     font-size: 13px;
 }
-
-
 .heightextinput {
     max-width:100%;
     height: 90px;
     text-align: justify;
 }
-
-
 .bloc-animes, .bloc-animes-user {
     position: relative;
     padding: 100px 0px;
@@ -327,13 +255,10 @@ img {
     background-color: #000;
 }
 
-
 .container-about-us {
     text-align: center;
     margin: 50px 0px;
 }
-
-
 .bloc-about-us{
     max-width: 500px;
     display: inline-block;
@@ -341,46 +266,110 @@ img {
     margin: 100px 0px;
     padding: 80px 10px;
 }
-
-
 .bloc-about-us h1 {
     text-align: center;
     font-weight: bold;
     font-size: 35px;
     font-family: 'Aclonica', sans-serif;
 }
-
-
 .bloc-about-us .text-about-us {
     text-align: justify;
     font-weight: bold;
     font-size: 17px;
 }
 
-
 .link-icon {
     padding: 20px 10px;
 }
-
-
 .icon {
     height: 60px;
     width: 60px;
 }
+#Global
+{
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+#Global #gauche {
+    float:left;
+    width:20%;
+    /* background-color:blue; */
+    height: 400px;
+}
+#Global #gauche img {
+    height:400px;
+    width:100%;
+    padding: 0 20px 0 0;
+}
+#Global #droite {
+    /* background-color: red; */
+    height: 400px;
+    width: 500px;   
+    
+}
+#Global #droite ul {
+    /* background-color:blue; */
+    padding: 10px;
+    margin: 0;
+}
+#Global #droite ul li{
+    list-style: none;
+    padding: 8px 0px;
+}
+#Global #droite ul li p{
+   margin: 0;
+}
+#Global #droite ul li a{
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    padding: 4px;
+}
+#Global #droite ul li a:hover{
+    background-color:#fff;
+    color: #000;
+    border-radius: 4px;
+}
+.title-details-anime{
+    margin: 90px 0 0 0;
+    text-align: center;
+}
+.title-details-anime h1{
+    font-family: 'Aclonica', sans-serif;
 
-
+}
+.contain-title-anime, .contain-studio-anime, .contain-genre-anime, .contain-nbepisode-anime, .contain-synopsis-anime {
+    display: flex;
+    margin-bottom: 30px;
+}
+.libelle{
+    padding: 5px;
+    font-size: 15px;
+}
+.getTitre, .getStudio, .getGenre, .getNbEpisodes, .getSynopsis{
+    padding: 5px;
+    width: 60%;
+    text-align:left;
+}
 .title-manga {
     position: relative;
     top: 50%;
 }
 
-
 .footer {
+    position: fixed;
+    bottom: 0;
     margin: auto;
     text-align: center;
     padding: 30px;
+    width: 100%;
 }
-
 
 .footer footer{
     margin: auto;
@@ -388,19 +377,17 @@ img {
     font-size: 0.7em;
 }
 
-
 .error {
     font-size: 15px;
     color: red;
     font-weight: bold;
 }
 
-
 .copyright {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 11px;
+    text-align: right;
 }
-
 
 #explication{
     display: none;
@@ -410,12 +397,10 @@ img {
     margin-bottom: 20px;
 }
 
-
 #explication ul {
     padding: 0;
     margin:0;
 }
-
 
 #explication li {
     list-style: none;
@@ -424,12 +409,10 @@ img {
     font-style: italic;
 }
 
-
 #explication #case1, #case2, #case3 {
     height:14px;
     width: 14px;
 }
-
 
 .msg-unvalid-password{
     display: none;
@@ -439,8 +422,6 @@ img {
     font-size: 0.7em;
     font-style: italic;
 }
-
-
 .msg-valid-password{
     display: none;
     position: relative;
@@ -450,19 +431,25 @@ img {
     font-style: italic;
 }
 
-
-
+.msg-no-user-animes {
+    display: block;
+    text-align: center;
+}
+#img-user-no-animes {
+    width: 250px;
+}
+.forbbiden-del-user {
+    color: red;
+}
 @media(max-width:991px){
     header {
         padding:20px;
     }
 
-
     header label {
         display: initial;
         color: white;
     }
-
 
     header .navbar{
         position: absolute;
@@ -473,40 +460,30 @@ img {
         display: none;
     }
 
-
     header .navbar ul li {
         width: 100%;   
     }
-
 
     header .navbar ul li ul {
         position: relative;
         width: 100%;
     }
 
-
     header .navbar ul li ul li {
         background: rgb(255, 255, 255);
     }
-
-
     header .navbar ul li ul li ul{
         width: 100%;
         left: 0;
     }
-
-
     header .navbar ul li ul input {
         background: rgb(255, 255, 255);
         width: 100%;
     }
 
-
     #menu-bar:checked ~ .navbar{
         display:initial
     }
-
-
     .bloc-about-us{
         max-width: 300px;
         display: inline-block;
@@ -515,29 +492,21 @@ img {
         margin: 60px 0px;
         padding: 40px 10px;
     }
-
-
     .bloc-about-us h1 {
         text-align: center;
         font-weight: bold;
         font-size: 20px;
         padding: 15px;
     }
-
-
     .bloc-about-us .text-about-us {
         text-align: justify;
         font-weight: bold;
         font-size: 13px;
         padding: 5px;
     }
-
-
     .link-icon {
         padding: 20px 10px;
     }
-
-
     .icon {
         height: 33px;
         width: 33px;
@@ -549,7 +518,6 @@ img {
         font-size: 12px;
     }
 
-
     .bloc-info-user table tr td a:hover{
         text-decoration: none;
         color: #000;
@@ -558,8 +526,18 @@ img {
         cursor: pointer;
     }
     
-
     .bloc-info-user h1 {
         margin: 30px;
     }
+
+
 }
+
+
+
+
+
+
+
+
+

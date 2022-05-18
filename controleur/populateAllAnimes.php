@@ -18,7 +18,7 @@
 
     foreach($animes as $key=>$value){
         echo "<div class=\"item\">";
-        echo    "<a href= \"\"><img src='data:image/jpeg;base64," . $value->getJaquette() . "' alt = \"" . $value->getTitre_fr() . "\"></a>";
+        echo    "<a href= \"animeDetails.php?id=". $value->getId_anime() ."\"><img src='data:image/jpeg;base64," . $value->getJaquette() . "' alt = \"" . $value->getTitre_fr() . "\"></a>";
         echo    "<p>" . $value->getTitre_fr() . "</p>";
         echo "</div>";
     }

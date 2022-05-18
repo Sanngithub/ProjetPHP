@@ -18,12 +18,10 @@ CSS FOR INDEX.PHP AND REGISTER.PHP
     box-shadow: 0 0 17px #333;
 }
 
-
 .header {
     text-align: center;
     padding-top: 75px;
 }
-
 
 .header h1 {
     color: rgb(218, 207, 207);
@@ -32,12 +30,10 @@ CSS FOR INDEX.PHP AND REGISTER.PHP
     font-family: 'Aclonica';
 }
 
-
 .main {
     text-align: center;
     padding-bottom: 20px;
 }
-
 
 .main input, button {
     width: 300px;
@@ -51,7 +47,6 @@ CSS FOR INDEX.PHP AND REGISTER.PHP
     margin-bottom: 20px;
 }
 
-
 .main button {
     padding-left:0;
     background-color: #83acf1;
@@ -60,23 +55,19 @@ CSS FOR INDEX.PHP AND REGISTER.PHP
     margin-bottom: 40px;
 }
 
-
 .main button:hover, .register:hover {
     box-shadow: 2px 2px 5px #555;
     background-color:#7799d4
 }
-
 
 .main input:hover {
     box-shadow: 2px 2px 5px #555;
     background-color:#ddd;
 }
 
-
 .main span {
     position: relative;
 }
-
 
 .main i {
     position: absolute;
@@ -86,25 +77,18 @@ CSS FOR INDEX.PHP AND REGISTER.PHP
     top: 2px;
 }
 
-
 .signup-container span {
     position: relative;
 }
-
-
 .signup-container p {
     color: #fff;
     padding:2px;
 }
-
-
 .signup-container a {
     text-decoration: none;
     color: #fff; 
     padding:2px;
 }
-
-
 .signup-container a:hover {
     background-color: #7799d4;
     border-radius: 3px;
@@ -119,12 +103,10 @@ CSS FOR INDEX.PHP AND REGISTER.PHP
     margin-bottom: 20px;
 }
 
-
 #explication ul {
     padding: 0;
     margin:0;
 }
-
 
 #explication li {
     list-style: none;
@@ -133,11 +115,9 @@ CSS FOR INDEX.PHP AND REGISTER.PHP
     font-style: italic;
 }
 
-
 #explication #case1, #case2, #case3 {
     height:15px;
 }
-
 
 #explicationUser{
     display: none;
@@ -147,12 +127,10 @@ CSS FOR INDEX.PHP AND REGISTER.PHP
     margin-bottom: 20px;
 }
 
-
 #explicationUser ul {
     padding: 0;
     margin:0;
 }
-
 
 #explicationUser li {
     list-style: none;
@@ -161,11 +139,9 @@ CSS FOR INDEX.PHP AND REGISTER.PHP
     font-style: italic;
 }
 
-
 #explicationUser #case1user, #case2user, #case3user {
     height:15px;
 }
-
 
 .error {
     font-size: 15px;
@@ -173,7 +149,6 @@ CSS FOR INDEX.PHP AND REGISTER.PHP
     color: red;
     font-weight: bold;
 }
-
 
 .msg-unvalid-password{
     display: none;
@@ -183,8 +158,6 @@ CSS FOR INDEX.PHP AND REGISTER.PHP
     font-size: 0.9em;
     font-style: italic;
 }
-
-
 .msg-valid-password{
     display: none;
     position: relative;
@@ -193,8 +166,6 @@ CSS FOR INDEX.PHP AND REGISTER.PHP
     font-size: 0.9em;
     font-style: italic;
 }
-
-
 .msg-unvalid-pseudo{
     display: none;
     position: relative;
@@ -203,8 +174,6 @@ CSS FOR INDEX.PHP AND REGISTER.PHP
     font-size: 0.9em;
     font-style: italic;
 }
-
-
 .msg-valid-pseudo{
     display: none;
     position: relative;
@@ -214,11 +183,9 @@ CSS FOR INDEX.PHP AND REGISTER.PHP
     font-style: italic;
 }
 
-
 .footer {
     text-align: center;
 }
-
 
 .footer footer{
     color: rgb(218, 207, 207);
