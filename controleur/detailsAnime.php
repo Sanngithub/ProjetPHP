@@ -2,6 +2,7 @@
     require '../modele/animeManager.php';
     $animeManager = new AnimeManager($bdd);
     $animes = $animeManager->getAll();
+    $idAdmin = 1;
 
     foreach($animes as $anime) {
         if ($id == $anime->getId_anime()) {
@@ -44,7 +45,7 @@
                                 <a class="download-torrent" href="../pictures/anime.torrent"><i class="fa fa-arrow-circle-down"></i> Download here</a>
                                 </li>
                 ';
-                                if($anime->getCreateur() == $_SESSION['user']->getIdUser()){
+                                if($anime->getCreateur() == $_SESSION['user']->getIdUser()  ||  $_SESSION['user']->getIdUser() == $idAdmin){
                                     echo '
                                         <li>
                                         <a id="update" href="../vue/animeUpdate.php?id='.$anime->getId_anime().'"><i class="far fa-edit"></i> Update</a>
