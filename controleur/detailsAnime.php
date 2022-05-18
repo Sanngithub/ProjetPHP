@@ -13,7 +13,15 @@
                     <div id="droite"> 
                         <ul>
                                 <li>
-                                    <label for="">Titre :</label>
+                                    <label for="">Titre original :</label>
+                                    <p>' . $anime->getTitre_native() . '</p>
+                                </li>
+                                <li>
+                                    <label for="">Titre romaji :</label>
+                                    <p>' . $anime->getTitre_romaji() . '</p>
+                                </li>
+                                <li>
+                                    <label for="">Titre français :</label>
                                     <p>' . $anime->getTitre_fr() . '</p>
                                 </li>
                                 <li>
@@ -55,4 +63,4 @@
             ';
         }
     }
-?>   
+?> 
