@@ -36,7 +36,7 @@
                                 if($anime->getCreateur() == $_SESSION['user']->getIdUser()){
                                     echo '
                                         <li>
-                                        <a id="update" href=""><i class="far fa-edit"></i> Update</a>
+                                        <a id="update" href="../vue/animeUpdate.php?id='.$anime->getId_anime().'"><i class="far fa-edit"></i> Update</a>
                                         </li>
                                         <li class="forbbiden-del-user"><i class="fas fa-ban"></i> By clicking on "delete", this anime will be immediately deleted without confirmation !</li>
                                         <li>
