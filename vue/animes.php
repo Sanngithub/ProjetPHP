@@ -3,7 +3,6 @@
     session_start();
     require('../controleur/login_verification.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>

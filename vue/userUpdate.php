@@ -21,76 +21,110 @@
         ?>
         <div class="container-user-update">
 
-<div class="title-user-update">
-    <h1>Enter new informations</h1>
-</div>
+            <div class="title-user-update">
+                <h1>Enter new informations</h1>
+            </div>
 
-<div class="bloc-user-update">
+            <div class="bloc-user-update">
 
-    <form name="formulaire" id="formulaire" action="../controleur/updateUser.php" method="post">
+                <form name="formulaire" id="formulaire" action="../controleur/updateUser.php" method="post">
 
-    <input type="hidden" name="id" value=<?php echo $myUser->getIdUser()?>>
+                    <input type="hidden" name="id" value=<?php echo $myUser->getIdUser()?>>
 
-        <div>
-            <label for="pseudo">Pseudo :</label>
-            <input type="text" id="pseudo" name="pseudo" value="<?php echo $myUser->getPseudo()?>" disabled>
-        </div>
-        <br>
-        <div>
-            <label for="mail">Email :</label>
-            <input type="email" id="mail" name="mail" value="<?php echo $myUser->getEmail()?>">
-        </div>
-        <br>
-        <div>
-            <label for="nom">Nom :</label>
-            <input type="text" id="nom" name="nom" value="<?php echo $myUser->getNom()?>" required>
-        </div>
-        <br>
-        <div>
-            <label for="prenom">Prenom :</label>
-            <input type="text" id="prenom" name="prenom" value="<?php echo $myUser->getPrenom()?>" required>
-        </div>
-        <br>
-        <div>
-            <label for="password">New Password :</label>
-            <input type="password" id="password" name="password" placeholder="enter new password" onkeyup="verifierMdp()"
-            onfocus="document.getElementById('explication').style.display = 'block'"
-            onblur="document.getElementById('explication').style.display ='none'" pattern="^(?=.*[a-zA-Z])(?=.*\d)(?=.*[-+_!@#$%^&*.,?]).{6,35}$">
-        </div>
-        <span class="msg-unvalid-password" ><br>Saisir un mot de passe dans les règles !</span>
-        <span class="msg-valid-password" ><br>Saisie du mot de passe correct !</span>
-        <div id="explication">
-            <ul>
-                <li>
-                    <img id="case1" src="../pictures/vide.png" alt="une case" height="30">
-                    le mot de passe doit contenir des lettres et des chiffres
-                </li>
-                <li>
-                    <img id="case2" src="../pictures/vide.png" alt="une case" height="30">
-                    le mot de passe doit contenir au moins un caractère spécial
-                </li>
-                <li>
-                    <img id="case3" src="../pictures/vide.png" alt="une case" height="30">
-                    le mot de passe doit être compris entre 6 et 35 caractères
-                </li>
-            </ul>
-        </div>
-        <br>
-        <div>
-            <label for="verifPassword">Confirm new password :</label>
-            <input type="password" id="verifPassword" name="verifPassword" placeholder="confirm password...">
-        </div>
-        <br>
-        <div class="div-button-user-update">
-            <button class="button-user-update" type="submit" name="submit" >click to modify</button>
-        </div>
-    </form>
+                    <div>
+                        <label for="pseudo">Pseudo :</label>
+                        <input type="text" id="pseudo" name="pseudo" value="<?php echo $myUser->getPseudo()?>" disabled>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="mail">Email :</label>
+                        <input type="email" id="mail" name="mail" value="<?php echo $myUser->getEmail()?>">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="nom">Nom :</label>
+                        <input type="text" id="nom" name="nom" value="<?php echo $myUser->getNom()?>" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="prenom">Prenom :</label>
+                        <input type="text" id="prenom" name="prenom" value="<?php echo $myUser->getPrenom()?>" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="password">New Password :</label>
+                        <input type="password" id="password" name="password" placeholder="enter new password" onkeyup="verifierMdp()"
+                        onfocus="document.getElementById('explication').style.display = 'block'"
+                        onblur="document.getElementById('explication').style.display ='none'" pattern="^(?=.*[a-zA-Z])(?=.*\d)(?=.*[-+_!@#$%^&*.,?]).{6,35}$">
+                    </div>
+                    <span class="msg-unvalid-password" ><br>Saisir un mot de passe dans les règles !</span>
+                    <span class="msg-valid-password" ><br>Saisie du mot de passe correct !</span>
+                    <div id="explication">
+                        <ul>
+                            <li>
+                                <img id="case1" src="../pictures/vide.png" alt="une case" height="30">
+                                le mot de passe doit contenir des lettres et des chiffres
+                            </li>
+                            <li>
+                                <img id="case2" src="../pictures/vide.png" alt="une case" height="30">
+                                le mot de passe doit contenir au moins un caractère spécial
+                            </li>
+                            <li>
+                                <img id="case3" src="../pictures/vide.png" alt="une case" height="30">
+                                le mot de passe doit être compris entre 6 et 35 caractères
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="verifPassword">Confirm new password :</label>
+                        <input type="password" id="verifPassword" name="verifPassword" placeholder="confirm password...">
+                    </div>
+                    <br>
+                    <div class="div-button-user-update">
+                        <button class="button-user-update" type="submit" name="submit" >click to modify</button>
+                    </div>
+                </form>
 
-        <p id="error" class="error">
-            <?php
-                if(isset($_SESSION['error_updateUser'])){echo '<br>'.$_SESSION['error_updateUser'].'<br><br>';}
-            ?>
-        </p>
+                <p id="error" class="error">
+                    <?php
+                        if(isset($_SESSION['error_updateUser'])){echo '<br>'.$_SESSION['error_updateUser'].'<br><br>';}
+                    ?>
+                </p>
+
+                <?php
+        
+                    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+                        $myUser->setEmail($_POST['mail']);
+                        $myUser->setNom($_POST['nom']);
+                        $myUser->setPrenom($_POST['prenom']);
+
+                        if(empty($_POST['verifPassword'])){
+                            $myUser->setPassword(   $myUser->getPassword()  );
+                            $usersManager->updateWithoutPassword($myUser);
+                            // header("location:../vue/userInfo.php?id=");
+                            echo '<div class="msg-update-ok>
+                                    <span>Modifications effectuées !</span>
+                                    </div>
+                            ';
+                        }
+                        else if (  !empty($_POST['verifPassword'])   &&  $_POST['password'] == $_POST['verifPassword'] ) {
+                            $myUser->setPassword(   $_POST['password']    );
+                            $usersManager->updateWithPassword($myUser);
+                            // header("location:../vue/userInfo.php?id=");
+                            echo '<div class="msg-update-ok>
+                                    <span>Modifications effectuées !</span>
+                                    </div>
+                            ';
+                        }
+                        else{
+                            $_SESSION['error_updateUser'] = 'Erreur : les mots de passent ne sont pas identiques !';
+                        }
+                    }
+                ?> 
+            </div>
         </div>
+
+        <script type="text/javascript" src="../js/script.js"> </script>
     </body>
 </html>
