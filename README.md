@@ -65,6 +65,6 @@ Ci-dessous les comptes utilisateurs disponibles après import de la base de donn
 - Ajouter la fonctionnalité "télécharger un .torrent"
 ## Demo
 
-![alt text](https://github.com/Sanngithub/ProjetPHP/main/pictures/demo0.png?raw=true)
+![alt text](https://github.com/Sanngithub/ProjetPHP/blob/main/pictures/demo0.png?raw=true)
 
-![alt text](https://github.com/Sanngithub/ProjetPHP/main/pictures/demo10.png?raw=true)
+![alt text](https://github.com/Sanngithub/ProjetPHP/blob/main/pictures/demo10.png?raw=true)
