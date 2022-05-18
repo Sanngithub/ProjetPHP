@@ -5,11 +5,11 @@
     
     echo '<div class="grid">';
 
-    foreach($animes as $anime){
-        if ($id == $anime->getCreateur()) {
+    foreach($animes as $key=>$value){
+        if ($id == $value->getCreateur()) {
             echo "<div class=\"item\">";
-            echo    "<a href= \"\"><img src='data:image/jpeg;base64," . $anime->getJaquette() . "' alt = \"" . $anime->getTitre_fr() . "\"></a>";
-            echo    "<p>" . $anime->getTitre_fr() . "</p>";
+            echo    "<a href= \"animeDetails.php?id=". $value->getId_anime() ."\"><img src='data:image/jpeg;base64," . $value->getJaquette() . "' alt = \"" . $value->getTitre_fr() . "\"></a>";
+            echo    "<p>" . $value->getTitre_fr() . "</p>";
             echo "</div>";
         }
     }
