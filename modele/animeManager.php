@@ -59,6 +59,25 @@
         }
 
 
+        public function getById($id) {
+            // on s'assure que $id est bien un int
+            $id = (int)$id;
+            
+            // on prépare la requête 
+            $req = $this->bdd->prepare('SELECT * FROM animes WHERE id_anime = ?');
+            // si elle fonctionne, on l'éxécute en y passant sous forme de tableau, les valeurs recherchées
+            $req->execute(array($id));
+            // PDO::FETCH_ASSOC retourne un tableau associatif indexé par le nom des champs
+            $donnees = $req->fetch(PDO::FETCH_ASSOC);
+            // je créé un nouvel objet Anime 
+            $anime = new Anime();
+            // je le construis via la méthode hydrate
+            $anime->hydrate($donnees);
+            // je retourne l'anime 
+            return $anime;
+        }
+
+
         public function getAll(){
             $animes = [];
 

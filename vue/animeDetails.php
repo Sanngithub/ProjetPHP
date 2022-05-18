@@ -3,7 +3,6 @@
     require('../controleur/login_verification.php');
     $id = $_GET['id'];
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,18 +17,14 @@
 
         <?php include_once('header.php'); ?>
 
-
         <div class="title-details-anime">
             <h1>Details Anime</h1>
         </div>
 
             <?php
                 require_once('../controleur/detailsAnime.php');
+
+                include_once('footer.php');
             ?>
-
-        
-
-        <?php include_once('footer.php'); ?>
-        
     </body>
 </html>
