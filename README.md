@@ -27,7 +27,7 @@ Il s'agit d'une plateforme de téléchargement d'animes.
 
 ## Charte graphique
 
-- Choix d'une image d'acceuil reflétant la thématique de la plateforme
+- Choix d'une image d'accueil reflétant la thématique de la plateforme
 - Choix de la police Aclonica rappelant l'univers du Japon et de l'univers Manga/animes
 - Listing des animes via jaquettes pour améliorer l'expérience utilisateur
 - Reprise de la police Aclonica dans le logo de la plateforme disponible dans le favicon d'onglet
@@ -37,7 +37,7 @@ Il s'agit d'une plateforme de téléchargement d'animes.
 - Lancer un serveur PHP (e.g. : Apache) avec gestion de base de données (e.g. : MySQL)
 - Créer une nouvelle base de donnée (nom : "superanimes")
 - Importer le fichier superanimes.sql
-- URL de la page d'acceuil : /vue/index.php
+- URL de la page d'accueil : /vue/index.php
 ## Comptes utilisateurs
 
 Ci-dessous les comptes utilisateurs disponibles après import de la base de données :
@@ -61,8 +61,7 @@ Ci-dessous les comptes utilisateurs disponibles après import de la base de donn
 - Faire fonctionner updateAnime.php
 - Gestion de vote & note pour les animes
 - Ajouter Captcha dans register_verification pour limiter l'action des robots
-- Autocomplétion sur Search-Title via AJAX
-- Ajouter la fonctionnalité "télécharger un .torrent"
+- Auto-complétion sur Search-Title via AJAX
 ## Demo
 
 ![alt text](https://github.com/Sanngithub/ProjetPHP/blob/main/pictures/demo0.png?raw=true)
