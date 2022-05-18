@@ -11,7 +11,8 @@
     if( isset($_SESSION['pseudo'])
         && isset($_SESSION['password'])
         && isset($_SESSION['passwordConfirmation'])
-        && isset($_SESSION['email'])){
+        && isset($_SESSION['email'])
+        && $_SESSION['password'] === $_SESSION['passwordConfirmation']){
 
             if( trim($_SESSION['pseudo']) != ""
                 // && preg_match($REGEX_PSEUDO, $_SESSION['pseudo'])
@@ -19,7 +20,7 @@
                 // && preg_match($REGEX_PASSWORD, $_SESSION['password'])
                 && trim($_SESSION['email']) != ""
                 // && preg_match($REGEX_EMAIL, $_SESSION['email'])
-                && $_SESSION['password'] === $_SESSION['passwordConfirmation']) {
+                ) {
                 
                         $user = new User();
                         $user->setPseudo($_SESSION['pseudo']);
@@ -47,7 +48,7 @@
                 && trim($_SESSION['pseudo']) != ""
                 && trim($_SESSION['password']) != ""
                 && trim($_SESSION['email']) != ""
-                && $_SESSION['password'] !== $_SESSION['passwordConfirmation']) {
+                && $_SESSION['password'] != $_SESSION['passwordConfirmation']) {
         
         $_SESSION['error_register'] = "Les mots de passent que vous avez saisi ne sont pas identiques !";
         header('location:../vue/register.php');
