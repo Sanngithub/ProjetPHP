@@ -12,7 +12,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style4.css?v=<?php echo time(); ?>">
-        <title>SuperFilms - My Informations</title>
+        <link rel="shortcut icon" href="../pictures/favicon.ico"/>
+        <title>SuperAnimes - Update</title>
         <style>
   
         </style>

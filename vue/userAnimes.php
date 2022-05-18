@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style4.css?v=<?php echo time(); ?>">
         <!-- force le cache à se reloader -->
+        <link rel="shortcut icon" href="../pictures/favicon.ico"/>
         <title>SuperAnimes - My Animes</title>
     </head>
 

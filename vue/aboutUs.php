@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SuperAnimes - About Us</title>
         <link rel="stylesheet" href="style4.css?v=<?php echo time(); ?>" type="text/css" >
+        <link rel="shortcut icon" href="../pictures/favicon.ico"/>
     </head>
     <body>
 

@@ -19,7 +19,7 @@
                 <li><a href="animes.php" target="_self">Home</a></li>
 
                 <li><a href="#">Category</a>
-                    <ul>
+                    <ul class ="menu-scroll">
                         <li><a href="animes.php?genre=Action">Action</a></li>
                         <li><a href="animes.php?genre=Adventure">Adventure</a></li>
                         <li><a href="animes.php?genre=Comedy">Comedy</a></li>

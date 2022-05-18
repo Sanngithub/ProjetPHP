@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
         <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
         <link rel="stylesheet" type="text/css" href="style2.css?v=<?php echo time(); ?>">
+        <link rel="shortcut icon" href="../pictures/favicon.ico"/>
         <title>SuperAnimes - Register</title>
     </head>
     <body>
