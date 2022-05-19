@@ -25,6 +25,7 @@ Il s'agit d'une plateforme de téléchargement d'animes.
 
 ## Optimizations
 
+- Hashage préalable du mot de passe via Bcrypt avant stockage en base de donnée
 - Si un utilisateur supprime son compte, la gestion de ses animes est transférée automatiquement au compte administrateur (idUser=1)
 - Le compte admin peut modifier/supprimer toutes les animes
 - Ajout d'une favicon pour améliorer l'identification de notre plateforme
